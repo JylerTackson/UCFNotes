@@ -162,10 +162,29 @@ Given $\Sigma=\{0,1\}$, describe the language recognized by the following DFA.
 Given $\Sigma=\{a,b\}$, construct a DFA that accepts all members of the following language $L$.
 $$
 \begin{equation}\tag{P.6}
-L=\{w:|w|mod3\neq0\}
+L=\{w:|w|\;mod3\neq0\}
 \end{equation}
 $$
+**NOTE:** We are not dealing with prefix or suffix in this problem; the language is defining a string $(w)$ and we are using the **string length** $|w|$ to finalize the string.
 
+To construct the DFA, I will use the 5-tuple definition of a DFA:
+- $Q$ for states:
+	- $q_0 \Rightarrow \text{start state}$
+	- $q_1 \Rightarrow \text{|w| mod3} \neq 0$
+	- $q_2 \Rightarrow \text{|w| mod3} = 0$
+	- $q_3 \Rightarrow \text{dead state}$
+- $\Sigma$ for alphabet:
+	- $\Sigma = \{a,b\}$
+- $\delta$ for transition functions:
+
+|       | $w\mathbf{mod}3=0$ | $w\mathbf{mod}3\neq0$ |
+| ----- | ------------------ | --------------------- |
+| $q_0$ |                    |                       |
+| $q_1$ |                    |                       |
+| $q_2$ |                    |                       |
+| $q_3$ |                    |                       |
+- $q_0$ is the start state
+- $F$ is the final state
 ---
 #### Problem 7:
 Given the following language $L$, construct a DFA that accepts all members.
@@ -174,6 +193,7 @@ $$
 L=\{ba^n:n\geq1,n\neq4\}
 \end{equation}
 $$
+
 
 ---
 #### Problem 8:

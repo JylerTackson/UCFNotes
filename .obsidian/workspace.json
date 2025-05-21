@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c87a4d3e8d4f2ff7",
+        "id": "9f1ce70709fdd495",
         "type": "tabs",
         "children": [
           {
-            "id": "310ee358493d814c",
+            "id": "2a16d6589b86d603",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summer25/Discrete2/Practice Problems/DFA/DFA_Practice.md",
+                "file": "Summer25/SystemSoftware/LAB/5_20_25/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DFA_Practice"
+              "title": "Untitled"
             }
           }
         ]
@@ -166,29 +166,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "310ee358493d814c",
+  "active": "2a16d6589b86d603",
   "lastOpenFiles": [
-    "Summer25/Discrete2/Practice Problems/DFA/COT4210_DFA_In_Class_Problems.pdf",
-    "Summer25/Discrete2/Practice Problems/DFA/DFA_Practice.md",
-    "Summer25/Discrete2/Textbook/Michael Silpser - 2013 - Introduction to the theory of computation [3rd Edition].pdf",
-    "Summer25/Discrete2/03_Finite Automata.md",
-    "Summer25/Discrete2/02_Three Basic Concepts.md",
-    "Summer25/Discrete2/01_Introduction.md",
-    "Summer25/Discrete2/Photos/2025-05-17-104625_489x167_scrot.png",
-    "Summer25/Discrete2/Practice Problems/DFA",
-    "Summer25/Discrete2/Photos/2025-05-17-094028_462x191_scrot.png",
+    "Summer25/SystemSoftware/LAB/5_20_25/Untitled.md",
+    "Summer25/SystemSoftware/LAB/5_20_25",
+    "Summer25/SystemSoftware/LAB",
+    "Summer25/POOS/Project1/P1 - API.md",
+    "Summer25/POOS/P1 - API.md",
+    "Summer25/POOS/Getting Started with LAMP.pdf",
     "Summer25/POOS/Project1/Getting Started with LAMP.pdf",
-    "Summer25/POOS/Project1/lu23374b2m74.tmp",
-    "Summer25/POOS/Project1/LAMPAPI/SearchColors.php",
-    "Summer25/POOS/Project1/LAMPAPI/Login.php",
-    "Summer25/POOS/Project1/LAMPAPI/AddColor.php",
-    "Summer25/POOS/Project1/LAMPAPI",
-    "Summer25/POOS/Project1/js/md5.js",
+    "Summer25/Discrete2/Slides/04_NonDeterminism.pdf",
+    "Summer25/POOS/JavaScript.md",
+    "Summer25/POOS/Untitled.md",
+    "Summer25/Discrete2/04_Nondeterminism.md",
+    "Summer25/SystemSoftware/03_Virtual Machines.md",
+    "Summer25/SystemSoftware/02_Systems Software.md",
+    "Summer25/Discrete2/03_Finite Automata.md",
+    "Summer25/Discrete2/01_Introduction.md",
+    "Summer25/Discrete2/02_Three Basic Concepts.md",
+    "Summer25/POOS/Untitled",
+    "Summer25/Discrete2/Photos/2025-05-19-174841_129x93_scrot.png",
+    "Summer25/Discrete2/Slides/03_FiniteAutomata.pdf",
+    "Summer25/Discrete2/Slides/01_Introduction.pdf",
+    "Summer25/Discrete2/Slides/NonDeterminism.pdf",
+    "Summer25/Discrete2/Practice Problems/DFA/DFA_Practice.md",
+    "Summer25/Discrete2/Practice Problems/DFA/COT4210_DFA_In_Class_Problems.pdf",
+    "Summer25/Discrete2/Photos/2025-05-17-104625_489x167_scrot.png",
+    "Summer25/Discrete2/Photos/2025-05-17-094028_462x191_scrot.png",
     "Summer25/POOS/Project1/images/background.png",
     "Summer25/POOS/images/background.png",
     "Summer25/SystemSoftware/01_Introduction.md",
-    "Summer25/SystemSoftware/03_Virtual Machines.md",
-    "Summer25/SystemSoftware/02_Systems Software.md",
     "System Software.md",
     "Welcome.md"
   ]
