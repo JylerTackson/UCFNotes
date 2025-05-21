@@ -9,6 +9,12 @@ Building a compiler in 4 steps (Projects):
 - [[02_Systems Software]]
 	- [[02_Systems Software#The structure of a tiny computer]]
 - [[03_Virtual Machines]]
+	- [[03_Virtual Machines#Virtual Machines as Software Interpreters]]
+	- [[03_Virtual Machines#P-code Instruction Set Architecture]]
+	- [[03_Virtual Machines#The Instruction Format]]
+	- [[03_Virtual Machines#Assembly Language]]
+- [[04_Implementing Subprograms]]
+	- 
 - Compilers and interpreters
 - Syntax and analysis
 - Grammars and parsing

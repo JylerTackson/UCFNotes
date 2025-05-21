@@ -4,21 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "9f1ce70709fdd495",
+        "id": "7d029b10f69ea904",
         "type": "tabs",
         "children": [
           {
-            "id": "2a16d6589b86d603",
+            "id": "864b2b97be6bba2d",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture03.Implementing Subprograms.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "COP3402.Su25.Lecture03.Implementing Subprograms"
+            }
+          }
+        ]
+      },
+      {
+        "id": "4cae84ce8477071d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "073c55f56bc7ee16",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summer25/SystemSoftware/LAB/5_20_25/Untitled.md",
+                "file": "Summer25/SystemSoftware/01_Introduction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "01_Introduction"
             }
           }
         ]
@@ -166,36 +184,46 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2a16d6589b86d603",
+  "active": "073c55f56bc7ee16",
   "lastOpenFiles": [
-    "Summer25/SystemSoftware/LAB/5_20_25/Untitled.md",
-    "Summer25/SystemSoftware/LAB/5_20_25",
-    "Summer25/SystemSoftware/LAB",
-    "Summer25/POOS/Project1/P1 - API.md",
+    "Summer25/SystemSoftware/04_Implementing Subprograms.md",
+    "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture03.Implementing Subprograms.pdf",
+    "Summer25/SystemSoftware/03_Virtual Machines.md",
+    "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture02.Virtual Machines.pdf",
+    "Summer25/SystemSoftware/Homework/HW1/HW1Instructions.Summer.2025docx.pdf",
+    "Kestrel/ROS/01_Packages.md",
+    "Summer25/Discrete2/Practice Problems/NFA & DFA/COT4210_NFA_to_DFA_Procedure.pdf",
+    "Summer25/Discrete2/Practice Problems/NFA & DFA/NFA/COT4210_NFA_In_Class_Problems.pdf",
+    "Summer25/Discrete2/Practice Problems/NFA & DFA/NFA",
+    "Summer25/Discrete2/Practice Problems/NFA & DFA/DFA/DFA_Practice.md",
+    "Summer25/Discrete2/Practice Problems/NFA & DFA/DFA/COT4210_DFA_In_Class_Problems.pdf",
+    "Summer25/Discrete2/Practice Problems/NFA & DFA/DFA",
+    "Summer25/Discrete2/Practice Problems/NFA & DFA",
+    "Summer25/Discrete2/Practice Problems/NFA/COT4210_NFA_In_Class_Problems.pdf",
+    "Kestrel/ROS/00_Workspace.md",
+    "Kestrel/ROS/02_Nodes.md",
     "Summer25/POOS/P1 - API.md",
-    "Summer25/POOS/Getting Started with LAMP.pdf",
-    "Summer25/POOS/Project1/Getting Started with LAMP.pdf",
-    "Summer25/Discrete2/Slides/04_NonDeterminism.pdf",
     "Summer25/POOS/JavaScript.md",
+    "Summer25/SystemSoftware/01_Introduction.md",
+    "Summer25/Discrete2/Homework/01/Homework 01.md",
+    "Summer25/Discrete2/Photos/2025-05-21-152054_239x164_scrot.png",
+    "Kestrel/ROS/03_Topics.md",
+    "Summer25/Discrete2/03_Finite Automata.md",
+    "Kestrel/Pictures/rqt_graph.png",
+    "Kestrel/Pictures/Topic-MultiplePublisherandMultipleSubscriber.gif",
+    "Summer25/SystemSoftware/LAB/5_20_25/Untitled.md",
+    "Summer25/POOS/Project1/P1 - API.md",
     "Summer25/POOS/Untitled.md",
     "Summer25/Discrete2/04_Nondeterminism.md",
-    "Summer25/SystemSoftware/03_Virtual Machines.md",
     "Summer25/SystemSoftware/02_Systems Software.md",
-    "Summer25/Discrete2/03_Finite Automata.md",
     "Summer25/Discrete2/01_Introduction.md",
     "Summer25/Discrete2/02_Three Basic Concepts.md",
-    "Summer25/POOS/Untitled",
     "Summer25/Discrete2/Photos/2025-05-19-174841_129x93_scrot.png",
-    "Summer25/Discrete2/Slides/03_FiniteAutomata.pdf",
-    "Summer25/Discrete2/Slides/01_Introduction.pdf",
-    "Summer25/Discrete2/Slides/NonDeterminism.pdf",
     "Summer25/Discrete2/Practice Problems/DFA/DFA_Practice.md",
-    "Summer25/Discrete2/Practice Problems/DFA/COT4210_DFA_In_Class_Problems.pdf",
     "Summer25/Discrete2/Photos/2025-05-17-104625_489x167_scrot.png",
     "Summer25/Discrete2/Photos/2025-05-17-094028_462x191_scrot.png",
     "Summer25/POOS/Project1/images/background.png",
     "Summer25/POOS/images/background.png",
-    "Summer25/SystemSoftware/01_Introduction.md",
     "System Software.md",
     "Welcome.md"
   ]
