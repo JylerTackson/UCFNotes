@@ -157,6 +157,8 @@ $$
 Given $\Sigma=\{0,1\}$, describe the language recognized by the following DFA.
 ![[2025-05-17-104625_489x167_scrot.png]]
 
+
+
 ---
 #### Problem 6:
 Given $\Sigma=\{a,b\}$, construct a DFA that accepts all members of the following language $L$.
@@ -193,12 +195,19 @@ $$
 L=\{ba^n:n\geq1,n\neq4\}
 \end{equation}
 $$
+The formal 5-tuple definition of DFA is:
+$$
+\begin{equation}\tag{DFA}
 
+\end{equation}
+$$
 
 ---
 #### Problem 8:
 Given $\Sigma=\{a,b\}$, construct a DFA that accepts all strings with at least one $b$ and **exactly** two $a's$.
 
+
 ---
 #### Problem 9:
 Given $\Sigma=\{a,b\}$, construct a DFA that accepts all strings with an **even number** of $a's$ and an **odd number** of $b's$.
+

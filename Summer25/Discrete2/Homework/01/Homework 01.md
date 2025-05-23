@@ -32,12 +32,45 @@ $$
 L_3=\{w:(n_a(w)mod3\leq n_b(w)mod3\}
 \end{equation}
 $$
+To begin I will define the 5-tuple definition of DFA:
+$$
+\begin{equation}\tag{DFA}
+DFA=\{Q_D,\Sigma_D,\delta_D,q_{0_D},F_D\}
+\end{equation}
+$$
+The language $L_3$ is defined as the following:
+- $w$ (The string) is defined as:
+	- $n_a(w)mod3 \leq n_b(w)mod3$
+- Where:
+	- $n_a(w)$ is the total number of a's
+	- $n_b(w)$ is the total number of b's
+- **We are trying to create a DFA that recognizes a language that constructs a string that has**:
+$$\text{(total \# of a's)mod3}\leq \text{ (total \# of b's)mod3}$$
+
+
 
 
 ---
 # 4. DFA Construction
 **(15 points)** In the C programming language, a value can be designated as a character type through a deceleration statement where the prefix starts with `char` and ends with the suffix `;`. Between the prefix and suffix is the name of the variable. Let $\mathbf{C}$ be the language of valid characters declaration statements. A member of $\mathbf{C}$ must start with `char` and end with `;`. The member must have at least 2 characters in its variable name and cannot contain the `;` character.
 Draw a DFA that recognizes $C$.
+
+To begin I will define the formal defintion of a DFA:
+$$
+\begin{equation}\tag{DFA}
+DFA = \{Q_D,\Sigma_D,\delta_D,q_{0_D},F_D\}
+\end{equation}
+$$
+For this problem I need to define:
+- $Q\Rightarrow$ Set of states that recognize $C$
+- $\Sigma \Rightarrow$ Alphabet that recognize $C$
+- $\delta \Rightarrow$ Transition functions that recognize $C$
+- $q_{0}\Rightarrow$ Start state for the DFA that recognizes $C$
+- $F \Rightarrow$ Final start for the DFA that recognizes $C$
+
+To begin, the problem states: "A member of $C$ must start with `char` and end with `;`." This statement tells us that the **Final state** $(F)$ MUST occur when the string $(w)$ has an occurrence of the `;` symbol. If there is an occurrence of the `;` symbol before the end of the string then the string will be invalid.
+
+
 
 ---
 # 5. Grammar Construction
@@ -53,3 +86,14 @@ Draw a DFA that recognizes $C$.
 - $R=aaaaaS \;|\; aa$
 - $S=\{S\}$
 Based on your answer, please include a description of what led you to the conclusion in order to receive potential full credit on this question. Any key factors missing could result in not receiving full credit.
+
+To begin, I will define a language by saying that it is simply a subset of a star closure alphabet that follows a set of rules.
+- $L=\Sigma^*$
+	- $\Sigma^*=\text{ All strings obtained by concatenating all symbols in the alphabet.}$
+		- INCLUDES $\lambda \text{ (empty string).}$
+
+The grammar is defined as a mechanism used to describe the language that generates our string ($w$) from the alphabet $(\Sigma)$. The grammar defines our:
+- $V$ - Variable $\Rightarrow$
+- $\Sigma$ - Alphabet $\Rightarrow \{a\}$
+- $R$ - Rules $\Rightarrow \{aaaaaS \;|\; aa\}$
+- $S$ - Starting Variables $\Rightarrow$

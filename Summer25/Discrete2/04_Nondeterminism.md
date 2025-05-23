@@ -36,9 +36,8 @@ To prove both Nondeterministic and Deterministic Finite Automatas are equivalent
 #### Converting from $\mathbf{NFA \rightarrow DFA:}$
 - Keep in mind the observations about the computation process of an NFA:
 	1) Multiple transitions imply that at any given time, an NFA is in a set of states
-		- Meaning that there are multiple transition states for an NFA and that it can 'split' and create copies of the NFA to do computations in parallel/
+		- Meaning that there are multiple transition states for an NFA and that it can 'split' and create copies of the NFA to do computations in parallel.
 	2) Empty transitions are handles in computation by *including their possibilities* in the set of states.
-		- 
 	3) Missing transitions simply don't add anything to the next set of states.
 		- If there is no transition that corresponds with the symbol that is inputted to the system in the current state then the system will undergo the **dead configuration** and stop the system; meaning that this missing transition will not add anything to the next set of states.
 	4) On a given transition, an NFA is simply transitioning from one element of $P(Q)$ to another.
