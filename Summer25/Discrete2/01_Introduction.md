@@ -127,7 +127,7 @@ An alphabet is a non-empty finite set of symbols.
 		Show that $S_n=\frac{n(n+1)}{2}$ for all $n=1,2,...$
 		1) Start with Base Case:
 			 - Our **Base Case** can be something like $n=0||1||etc...$ 
-			 - We must prove this initial value on the right side of the euation:
+			 - We must prove this initial value on the right side of the equation:
 				$$
 				 \begin{equation}\tag{Base Case}
 				 S_{n=1}=\frac{1(1+1)}{2}=\frac22=1
@@ -151,9 +151,7 @@ $$
 \end{equation}
 $$
 			- $\therefore$ the equation above is showing: $S_k+(k+1)=S_k+(k+1)$
-			- To prove using weak induction you show that $S_k+({k+1})=S_{k+1}$
-			- $$\begin{equation}\tag{I.S.4}(1+2+3+...+k+(k+1))=\frac{k(k+1)}{2}+\frac{2(k+1)}{2}\end{equation}$$
-			- $$\begin{equation}\tag{I.S.5}S_{(k)}+(k+1)=\frac{k^2+3k+2}{2}\end{equation}$$
+			- To prove using weak induction you show that $S_k+({k+1})=S_{k+1}$$$\begin{equation}\tag{I.S.4}(1+2+3+...+k+(k+1))=\frac{k(k+1)}{2}+\frac{2(k+1)}{2}\end{equation}$$ $$\begin{equation}\tag{I.S.5}S_{(k)}+(k+1)=\frac{k^2+3k+2}{2}\end{equation}$$
 			- $\therefore S_{k} + (k+1)=S_{k+1}$ **Which proves using weak induction.** 
 	- Strong Induction
 
