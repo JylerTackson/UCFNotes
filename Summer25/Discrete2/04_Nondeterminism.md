@@ -69,4 +69,56 @@ $$
 			- $Q_N=\{\emptyset,1,2,3\}$
 			- $Q_D=P(Q_N)=\{\emptyset,1,2,3,12,23,13,123\}$
 3) **Starting State:**
-	- 
+
+
+# What is a Regular Language?
+- As long as a DFA can recognize a language then it is considered a Regular Language.
+- A union between regular language results in a regular language.
+
+- Every NFA has an Equivalent DFA.
+	- Every DFA by default is an NFA.
+	- Not every NFA is a DFA due to rule violations but can be CONVERTED to an equivalent DFA's.
+
+- Convert the following NFA into its equivalent DFA:
+![[2025-06-02-141348_472x138_scrot.png]]
+
+1) Defining your set of states for you DFA.
+	- Your DFA set of states will be constructed of the **Power Set** of your NFA's sets.
+**For Example:** The above NFA has 3 states $\{1,2,3\} \therefore$ the DFA state set will be $P\{1,2,3\}=\{1,2,3,12,13,23,123,\emptyset\}$
+
+- The **starting state** will be the same as the one from the NFA; for examp,.,le:
+	- The starting state in the NFA is $q_1 \therefore$ starting state in the DFA is $q_1$
+- The **final state** is every DFA state that includes the NFA final state; for example:
+	- The final state in the NFA is $q_3 \therefore$ final state in the DFA is $\{q_3, q_{13}, q_{23}, q_{123}\}$.
+
+#### How an NFA reads a string?
+It is important to understand how a string is parsed into an Finite Automata. The string is defined as a set of symbols from the alphabet. The alphabet includes a symbol known as the null symbol $(\lambda)$ which effects how the string is parsed to the finite automata.
+- When a string is read it can be seen as:
+	- $w=\lambda^n S \lambda^n$
+- This is saying that you can have an $n$ number of null symbols at both the beginning and the end of the string with the symbols from your alphabet $(S)$ in the middle.
+
+#### Defining transition functions for a DFA:
+Now that we understand how many states will be within our DFA from the NFA & how strings are properly parsed into finite automatas we can start defining the transition functions which define the relationships between the nodes within the DFA.
+
+Transition Functions $\delta_D$:
+- $\delta(q_1,a)= \{q_1,q_2,q_3\}=q_{123}$
+- $\delta(q_1,b)=\{q_\emptyset\}=q_\emptyset$
+- $\delta(q_2,a)=\{q_3\}=q_3$
+- $\delta(q_2,b)=\{q_2,q_3\}=q_{23}$
+- $\delta(q_3,a)=\{q_3\}=q_3$
+- $\delta(q_3,b)=\{q_\emptyset\}=q_\emptyset$
+
+Now that we have defined our transition functions for our single states, the rest of the transition 
+- $\delta((q_1,q_2),a)=\delta(q_1,a)\cup\delta(q_2,a)=\{q_1,q_2,q_3\}\cup\{q_3\}=q_{123}$
+- $\delta((q_1,q_2),b)=\delta(q_1,b)\cup\delta(q_2,b)=\{q_\emptyset\}\cup\{q_2,q_3\}=q_{23}$
+- $\delta((q_1,q_3),a)=\delta(q_1,a)\cup\delta(q_3,a)=\{q_1,q_2,q_3\}\cup\{q_3\}=q_{123}$
+- $\delta((q_1,q_3),b)=\delta(q_1,b)\cup\delta(q_3,b)=\{q_\emptyset\}\cup\{q_\emptyset\}=q_\emptyset$
+- $\delta((q_2,q_3),a)=\delta(q_2,a)\cup\delta(q_3,a)=\{q_3\}\cup\{q_3\}=q_3$
+- $\delta((q_2,q_3),b)=\delta(q_2,b)\cup\delta(q_3,b)=\{q_2,q_3\}\cup\{q_\emptyset\}=q_{23}$
+- $\delta((q_1,q_2,q_3),a)=\delta(q_1,a)\cup\delta(q_2,a)\cup\delta(q_3,a)=\{q_1,q_2,q_3\}\cup\{q_3\}\cup\{q_3\}=q_{123}$
+- $\delta((q_1,q_2,q_3),b)=\delta(q_1,b)\cup\delta(q_2,b)\cup\delta(q_3,b)=\{q_\emptyset\}\cup\{q_2,q_3\}\cup\{q_\emptyset\}=q_{23}$
+
+Utilizing the above transition statements we can construct the DFA as followed:
+![[2025-06-05-172906_460x493_scrot.png]]
+In the DFA you notice that starting at $q_1$ you are **UNABLE** to reach the states: $\{q_{12}, q_{13}, q_2\}$. These states can be removed from the final DFA due to them having no affect on the final state of the actual system resulting in:
+![[2025-06-05-173511_460x492_scrot.png]]

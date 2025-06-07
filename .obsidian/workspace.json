@@ -4,43 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f38026e4c0b0acd3",
+        "id": "b363ade328e0a7a6",
         "type": "tabs",
-        "dimension": 12.077294685990339,
         "children": [
           {
-            "id": "fff30b7974a6e3d5",
+            "id": "5738869415ae1ca1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summer25/SystemSoftware/06_LexicalAnalysis.md",
+                "file": "Summer25/Discrete2/04_Nondeterminism.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06_LexicalAnalysis"
-            }
-          }
-        ]
-      },
-      {
-        "id": "f7845164b5b71c63",
-        "type": "tabs",
-        "dimension": 87.92270531400966,
-        "children": [
-          {
-            "id": "3662dc6bb8b05324",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Summer25/SystemSoftware/LAB/compiler/notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "notes"
+              "title": "04_Nondeterminism"
             }
           }
         ]
@@ -188,20 +166,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3662dc6bb8b05324",
+  "active": "5738869415ae1ca1",
   "lastOpenFiles": [
-    "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture05.Lexical analysis.pdf",
-    "Summer25/SystemSoftware/LAB/compiler/notes.md",
-    "Summer25/SystemSoftware/LAB/compiler",
+    "Summer25/Discrete2/Photos/2025-06-05-172906_460x493_scrot.png",
+    "Summer25/Discrete2/Photos/2025-06-05-173511_460x492_scrot.png",
+    "Summer25/Discrete2/Photos/2025-06-02-140650_235x88_scrot.png",
+    "Summer25/Discrete2/Photos/2025-05-19-174841_129x93_scrot.png",
+    "Summer25/Discrete2/Photos/2025-05-17-094028_462x191_scrot.png",
+    "Summer25/Discrete2/Photos/2025-05-17-104625_489x167_scrot.png",
+    "Summer25/Discrete2/Photos/2025-05-21-152054_239x164_scrot.png",
+    "Summer25/Discrete2/Photos/2025-06-02-141348_472x138_scrot.png",
+    "Summer25/Discrete2/Photos/2025-06-05-173142_17x48_scrot.png",
+    "Summer25/Discrete2/04_Nondeterminism.md",
+    "Summer25/Discrete2/05_Regular Expressions.md",
     "Summer25/SystemSoftware/06_LexicalAnalysis.md",
+    "Summer25/SystemSoftware/LAB/compiler/notes.md",
+    "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture05.Lexical analysis.pdf",
+    "Summer25/SystemSoftware/LAB/compiler",
     "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture04.Compiler_interpreter.pdf",
     "Summer25/SystemSoftware/05_Compilers&Interpreters.md",
-    "Summer25/Discrete2/05_Regular Expressions.md",
     "Summer25/Discrete2/Textbook/Michael Silpser - 2013 - Introduction to the theory of computation [3rd Edition].pdf",
     "Summer25/SystemSoftware/Slides/lu216886u66v.tmp",
     "Summer25/SystemSoftware/Slides/lu216886u66c.tmp",
     "Summer25/Discrete2/06_Non-Regular Expressions.md",
-    "Summer25/Discrete2/Photos/2025-06-02-141348_472x138_scrot.png",
     "Summer25/Discrete2/Slides/05_Regular Expressions.pdf",
     "Summer25/Discrete2/Practice Problems/Regular & Non-Regular Lanagues/COT4210_Pumping_Lemma_In_Class_Problems.pdf",
     "Summer25/Discrete2/Practice Problems/Regular & Non-Regular Lanagues",
@@ -213,7 +200,6 @@
     "Summer25/SystemSoftware/01_Introduction.md",
     "Summer25/SystemSoftware/02_Systems Software.md",
     "Summer25/Discrete2/Practice Problems/NFA & DFA/DFA/DFA_Practice.md",
-    "Summer25/Discrete2/04_Nondeterminism.md",
     "Summer25/Discrete2/02_Three Basic Concepts.md",
     "Summer25/Discrete2/01_Introduction.md",
     "Summer25/Discrete2/03_Finite Automata.md",
@@ -225,14 +211,8 @@
     "Kestrel/ROS/00_Workspace.md",
     "Kestrel/ROS/02_Nodes.md",
     "Summer25/POOS/JavaScript.md",
-    "Summer25/Discrete2/Photos/2025-05-21-152054_239x164_scrot.png",
     "Kestrel/ROS/03_Topics.md",
     "Kestrel/Pictures/rqt_graph.png",
-    "Kestrel/Pictures/Topic-MultiplePublisherandMultipleSubscriber.gif",
-    "Summer25/Discrete2/Photos/2025-05-19-174841_129x93_scrot.png",
-    "Summer25/Discrete2/Photos/2025-05-17-104625_489x167_scrot.png",
-    "Summer25/Discrete2/Photos/2025-05-17-094028_462x191_scrot.png",
-    "Summer25/POOS/Project1/images/background.png",
-    "Summer25/POOS/images/background.png"
+    "Kestrel/Pictures/Topic-MultiplePublisherandMultipleSubscriber.gif"
   ]
 }
