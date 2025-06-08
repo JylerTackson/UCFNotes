@@ -86,7 +86,7 @@ $$
 	- Your DFA set of states will be constructed of the **Power Set** of your NFA's sets.
 **For Example:** The above NFA has 3 states $\{1,2,3\} \therefore$ the DFA state set will be $P\{1,2,3\}=\{1,2,3,12,13,23,123,\emptyset\}$
 
-- The **starting state** will be the same as the one from the NFA; for examp,.,le:
+- The **starting state** will be the same as the one from the NFA; for example:
 	- The starting state in the NFA is $q_1 \therefore$ starting state in the DFA is $q_1$
 - The **final state** is every DFA state that includes the NFA final state; for example:
 	- The final state in the NFA is $q_3 \therefore$ final state in the DFA is $\{q_3, q_{13}, q_{23}, q_{123}\}$.
@@ -98,7 +98,7 @@ It is important to understand how a string is parsed into an Finite Automata. Th
 - This is saying that you can have an $n$ number of null symbols at both the beginning and the end of the string with the symbols from your alphabet $(S)$ in the middle.
 
 #### Defining transition functions for a DFA:
-Now that we understand how many states will be within our DFA from the NFA & how strings are properly parsed into finite automatas we can start defining the transition functions which define the relationships between the nodes within the DFA.
+Now that we understand how many states will be within our DFA from the NFA & how strings are properly parsed into finite automata's we can start defining the transition functions which define the relationships between the nodes within the DFA.
 
 Transition Functions $\delta_D$:
 - $\delta(q_1,a)= \{q_1,q_2,q_3\}=q_{123}$
