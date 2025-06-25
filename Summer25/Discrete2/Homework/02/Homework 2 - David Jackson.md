@@ -1,4 +1,9 @@
 # Homework 2 - 60pts
+## David Jackson
+## 5298477
+## Discrete 2 - COT4210
+## Steinberg
+
 ## 1. NFA Conversion
 (15 points) Convert the following NFA to its equivalent DFA using the procedure learned in class that produces all possible states. You may assume that Σ = {a, b}. From your resulting picture, which states are unreachable based on the possibilities from the DFA?![[Pasted image 20250607234010.png]]
 
@@ -47,22 +52,64 @@ Restrictions:
 - Can NOT use set difference.
 
 $$\begin{equation}\tag{A.2}
-r_C=\{char\circ\{a | b | c | d | e | h | i | r\}^n\circ\mathbf{;}\} \text{ Where n }\geq 2
+r_C=\{char\circ\{a | b | c | d | e | h | i | r\}^+\circ\{a | b | c | d | e | h | i | r\}^+\circ\mathbf{;}\}
 \end{equation}$$
 - This expression satisfies the requirements
-	1) Concatenates the preffix `char`
+	1) Concatenates the prefix `char`
 	2) Uses every valid symbol from alphabet
 		- Excludes `;`
 		- Includes all symbols by using the `|` OR operation
-	3) Specifies that $n\geq2$ which satisfies the length requirement
+	3) Specifies positive closure which excludes the null string.
 	4) Finally Concatenates the suffix `;`
 ---
 ## 3. Proof by Construction
 (15 points) Let A and B be regular languages. We define the following operation PSHUFFLE. 
 
-PSHUFFLE(A,B) = {w | w = a1b1...akbk, where a1...ak ∈ A and b1...bk ∈ B, each ai, bi ∈ Σ}. 
+$$\begin{equation}
+PSHUFFLE(A,B) = \{w | w = a^1b^1...a^kb^k,\text{ where }a^1...a^k ∈ A\text{ and }b^1...b^k ∈ B,\text{ each }a^i, b^i ∈ Σ\}.
+\end{equation}$$
 
-Show that the class of regular languages is closed under PSHUFFLE. You will need to write out a proof. Hint, use a proof by construction technique.
+Show that the class of regular languages is closed under **PSHUFFLE**. You will need to write out a proof. Hint, use a proof by construction technique.
+
+**PSHUFFLE** zips two strings of equal length together, taking one symbol from a word in _A_, then one from a word in _B_, and so on.
+To recognize such words we only need to:
+1) Remember whose turn it is
+2) Run the usual DFA's for A & B on the symbols that belong to them.
+Because DFAs are closed under direct product, adding a single parity will still yields a DFA.
+
+Since both A and B are both regular languages they both have a DFA that represent them therefore we can say:
+$$\begin{equation}
+D_A = \{Q_A,\Sigma_A,\delta_A,q_A,F_A\}
+\end{equation}$$
+$$\begin{equation}
+D_B = \{Q_B,\Sigma_B,\delta_B,q_B,F_B\}
+\end{equation}$$
+To show that **PSHUFFLE** is a regular language we can define a new DFA s.t.:
+$$\begin{equation}
+M_{PSHUFFLE}=\{Q_P,\Sigma_P,\delta_P,q_P,F_P\}
+\end{equation}$$
+We will need a method of determining which $\delta_{A,B}$ to use and for that we will use:
+$$\begin{equation}\tag{Turn Bit}
+t=\{0,1\}
+\end{equation}$$
+The turn bit will determine which transition function to use. For example:
+$$\begin{equation}\tag{t=0}
+\text{If t=0 use }\delta_A
+\end{equation}$$
+$$\begin{equation}\tag{t=1}
+\text{If t=1 use }\delta_B
+\end{equation}$$
+This is the method that will determine which languages "turn" it is aka parity.
+
+Finally with this in mind, we know that:
+$$\begin{equation}
+Q_M=Q_A\times Q_B \times \{0,1\}
+\end{equation}$$
+$$\begin{equation}
+|Q_M|=|Q_A|\times |Q_B| \times |\{0,1\}|< \infty
+\end{equation}$$
+$\therefore$ **PSHUFFLE** is a regular language.
+$$QED$$
 
 ---
 ## 4. DFA $\rightarrow$ GFNA

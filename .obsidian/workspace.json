@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summer25/Discrete2/04_Nondeterminism.md",
+                "file": "Summer25/Discrete2/07_Context-Free Grammars.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04_Nondeterminism"
+              "title": "07_Context-Free Grammars"
             }
           }
         ]
@@ -168,31 +168,36 @@
   },
   "active": "5738869415ae1ca1",
   "lastOpenFiles": [
-    "Summer25/Discrete2/Photos/2025-06-05-172906_460x493_scrot.png",
-    "Summer25/Discrete2/Photos/2025-06-05-173511_460x492_scrot.png",
-    "Summer25/Discrete2/Photos/2025-06-02-140650_235x88_scrot.png",
-    "Summer25/Discrete2/Photos/2025-05-19-174841_129x93_scrot.png",
-    "Summer25/Discrete2/Photos/2025-05-17-094028_462x191_scrot.png",
-    "Summer25/Discrete2/Photos/2025-05-17-104625_489x167_scrot.png",
-    "Summer25/Discrete2/Photos/2025-05-21-152054_239x164_scrot.png",
-    "Summer25/Discrete2/Photos/2025-06-02-141348_472x138_scrot.png",
-    "Summer25/Discrete2/Photos/2025-06-05-173142_17x48_scrot.png",
+    "Summer25/SystemSoftware/Midterm/Midterm Review.md",
+    "Summer25/Discrete2/07_Context-Free Grammars.md",
+    "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture03.Implementing Subprograms.pdf",
+    "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture04.Compiler_interpreter.pdf",
+    "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture05.Lexical analysis.pdf",
+    "Summer25/SystemSoftware/06_LexicalAnalysis.md",
+    "Summer25/Discrete2/Homework/02/Homework 2 - David Jackson.md",
+    "Summer25/Discrete2/02_Three Basic Concepts.md",
+    "Summer25/Discrete2/Homework/02/Pasted image 20250608135926.png",
+    "Summer25/Discrete2/Homework/02/Pasted image 20250608142028.png",
+    "Summer25/Discrete2/Homework/02/Pasted image 20250609002424.png",
+    "Summer25/Discrete2/Homework/02/Pasted image 20250609002426.png",
+    "Summer25/Discrete2/06_Non-Regular Expressions.md",
+    "Summer25/Discrete2/Practice Problems/Regular & Non-Regular Lanagues/COT4210_GNFA_to_REX_Procedure.pdf",
+    "Summer25/Discrete2/Photos/Pasted image 20250607220951.png",
+    "Summer25/Discrete2/Photos/Pasted image 20250607220652.png",
+    "Summer25/Discrete2/Photos/Pasted image 20250607220224.png",
+    "Summer25/Discrete2/Photos/Pasted image 20250607215757.png",
+    "Summer25/Discrete2/Photos/Pasted image 20250607211206.png",
+    "Summer25/Discrete2/Photos/Pasted image 20250607210846.png",
+    "Summer25/Discrete2/Homework/02/COT4210_Homework_2_Summer_2025.pdf",
+    "Summer25/Discrete2/Homework/02",
     "Summer25/Discrete2/04_Nondeterminism.md",
     "Summer25/Discrete2/05_Regular Expressions.md",
-    "Summer25/SystemSoftware/06_LexicalAnalysis.md",
     "Summer25/SystemSoftware/LAB/compiler/notes.md",
-    "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture05.Lexical analysis.pdf",
     "Summer25/SystemSoftware/LAB/compiler",
-    "Summer25/SystemSoftware/Slides/COP3402.Su25.Lecture04.Compiler_interpreter.pdf",
     "Summer25/SystemSoftware/05_Compilers&Interpreters.md",
     "Summer25/Discrete2/Textbook/Michael Silpser - 2013 - Introduction to the theory of computation [3rd Edition].pdf",
     "Summer25/SystemSoftware/Slides/lu216886u66v.tmp",
     "Summer25/SystemSoftware/Slides/lu216886u66c.tmp",
-    "Summer25/Discrete2/06_Non-Regular Expressions.md",
-    "Summer25/Discrete2/Slides/05_Regular Expressions.pdf",
-    "Summer25/Discrete2/Practice Problems/Regular & Non-Regular Lanagues/COT4210_Pumping_Lemma_In_Class_Problems.pdf",
-    "Summer25/Discrete2/Practice Problems/Regular & Non-Regular Lanagues",
-    "Summer25/Discrete2/Practice Problems/Regular & Non-Regular Lanagues/COT4210_Regular_Expressions_In_Class_Problems.pdf",
     "Summer25/Discrete2/Homework/01/Homework 01.md",
     "Summer25/SystemSoftware/LAB/MakeFiles/MakeFiles.md",
     "Summer25/SystemSoftware/Homework/HW1/HW1 - SPECS.md",
@@ -200,7 +205,6 @@
     "Summer25/SystemSoftware/01_Introduction.md",
     "Summer25/SystemSoftware/02_Systems Software.md",
     "Summer25/Discrete2/Practice Problems/NFA & DFA/DFA/DFA_Practice.md",
-    "Summer25/Discrete2/02_Three Basic Concepts.md",
     "Summer25/Discrete2/01_Introduction.md",
     "Summer25/Discrete2/03_Finite Automata.md",
     "Summer25/POOS/Accessibility.md",
@@ -209,10 +213,6 @@
     "Summer25/SystemSoftware/04_Implementing Subprograms.md",
     "Kestrel/ROS/01_Packages.md",
     "Kestrel/ROS/00_Workspace.md",
-    "Kestrel/ROS/02_Nodes.md",
-    "Summer25/POOS/JavaScript.md",
-    "Kestrel/ROS/03_Topics.md",
-    "Kestrel/Pictures/rqt_graph.png",
-    "Kestrel/Pictures/Topic-MultiplePublisherandMultipleSubscriber.gif"
+    "Kestrel/ROS/02_Nodes.md"
   ]
 }
