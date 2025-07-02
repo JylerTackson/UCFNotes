@@ -47,3 +47,25 @@ Write a context-free grammar for the following languages:
 	- $A\rightarrow a|aAb|aA$
 	- $B\rightarrow b|aBb|Bb$
 
+# Ambiguity
+
+
+# Chomsky Normal Form
+A simplified form for context-free grammars
+- Every rule is of one of the following forms
+	- $A\rightarrow BC$
+	- $A\rightarrow a$
+	- $S \rightarrow \lambda$
+- Where $A, B$ and $C$ are variables, **a** is a terminal and:
+	- $S$ is the starting variable
+	- Neither $B$ nor $C$ are $S$ ($A \text{ can be}$)
+
+### Converting to CNF:
+1) Add a new start variable
+2) Get rid of rewrites to the empty string
+3) Get rid of unit rules
+4) Convert all the remaining rules
+	- Ex:
+		- Convert the CFG into CNF
+		  $G=C\{S,AB\}, \{a,b\},S,R$
+		- $S\rightarrow$
