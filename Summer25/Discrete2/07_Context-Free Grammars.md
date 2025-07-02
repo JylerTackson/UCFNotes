@@ -30,7 +30,7 @@ The following grammar $G_2 = \{\{S,A,B\}, \{a,b\}, R, S\}$
 ## Context-Free Grammar
 A grammar is considered **context-free** if **ALL** the rules are in the form:
 - $A\rightarrow x$ where $A\in V$ and $x\in (V\cup \Sigma)^*$
-
+![[Pasted image 20250701202342.png]]
 
 ### Examples:
 Write a context-free grammar for the following languages:
@@ -48,10 +48,16 @@ Write a context-free grammar for the following languages:
 	- $B\rightarrow b|aBb|Bb$
 
 # Ambiguity
+If a grammar generates the same string in several different ways, we say that the string is derived **ambiguously** therefore we say that the grammar is **ambiguous**.
+![[Pasted image 20250701202944.png]]
+
+A derivation of a string $w$ in a grammar $G$ is a **leftmost derivation** if at every step the leftmost remaining variable is the one replaced.
+
 
 
 # Chomsky Normal Form
 A simplified form for context-free grammars
+![[Pasted image 20250701203120.png]]
 - Every rule is of one of the following forms
 	- $A\rightarrow BC$
 	- $A\rightarrow a$
