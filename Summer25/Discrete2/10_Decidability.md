@@ -71,6 +71,7 @@ $M=$ on input $<B,s>$
 ---
 
 # Context Free Languages
+The easy way to **recognizability** is to take a CFG and just keep iterating on it until you find a derivation that generates S; however, we want decidability NOT recognizability.
 
 ## Decidability
 Think about a new grammar $G$ in Chomsky Normal Form. Every rule in a CNF grammar has one of the two forms:
@@ -143,3 +144,48 @@ Call a language co-Turing recognizable if its complement is recognizable.
 So a language is decidable iff it is both recognizable and co-recognizable.
 $A_{TM}$ is obviously recognizable - but we've already proven that its undecidable. So $A_{TM}$ is unrecognizable.
 
+#### Acceptance Turing Machine Problem
+Consider the following Turing Machine:
+$$A_{TM}=\{<M,s>|\text{M is a Turing machine that accepts s}\}$$
+##### Proof By Contradiction
+By way of contradiction, show that this machine is undecidable:
+1) Assume its decidable.
+	- Given that, there exists a decider $H$ for $A_{TM}$$$H(<M,s>)\text{ accepts if M accepts s and rejects otherwise}$$
+2) Now consider a new machine called the "Devils Advocate" called $(D)$.
+	- Takes a Decider as input and returns the opposite result.
+3) You must consider all the possible machines that this can run therefore, you must consider:
+	- $D(<D>)$
+		- This is an obvious contradiction. $A_{TM}$ is undecidable.
+![[Pasted image 20250723223840.png]]
+---
+## Examples
+
+### Decidable using Graph
+Let $\text{TRIANGLE}_G=\{<G>|G\text{ is a graph that contains a triangle}\}$
+- Show that $\text{TRIANGLE}_G$ is decidable
+![[Pasted image 20250723142133.png]]
+
+You are going to create a Turing Machine that will run this graph:
+
+- Remember what a graph is; a set of
+	- Vertices
+	- Edges
+
+$M_{\text{TRIANGLE}}$: On input $<G>$, execute:
+1) Obtain the following vertices V & edges E of G
+2) For every distinct triplet of nodes (x, y, z) in the set of V
+	1) If (x, y), (x, z), (y, z) - (assuming this is undirected) - $\in V$ then accept
+3) If we haven't accepted, reject
+
+--------------------
+### Decidable using Regex
+$\text{A}_\text{REX} = \{<R,s> | R \text{ is a regular expression that generates s}\}$
+- Show that $A_\text{REX}$ is decidable.
+
+You are going to create a Turing Machine that will run this REGEX:
+$M_\text{REX}$: on input $<R,s>$
+
+1) Convert REGEX $R$ into an $NFA$ ($A$) using $REGEX \to NFA$ procedure.
+2) Run $TM_{A_{NFA}}$ (Can be found at the top of the notes) with input of $<A,s>$
+	- We are feeding our NFA we created using our REGEX into our previously created TM that shows that a NFA is a decidable language.
+3) If $TM_{A_{NFA}}$ Accepts, then we accept, else we reject.
