@@ -90,6 +90,16 @@ $M:$ on input $<G,s>$
 
 ---
 
+## 7) $CFG$
+$$L=\{<G>|\text{G is a CFG over }\{0,1\} \text{ and } 1^* \cap L(G)\neq \emptyset\}$$
+Show that $L$ is decidable
+$$ANSWER$$
+To show that $L$ is a decidable language I will create a Decider $M$:
+
+$M:$ on input $<G>$
+1) Construct a new PDA $P$ that recognizes $G$
+2) Let $w$ be a string s.t. $s\in 1^*$
+3) 
 # 2) Reduction
 
 ### 1) $HALT_{TM}$
