@@ -11,8 +11,6 @@
 
 **Linker**
 Linkers are programs which can take two or more object code files to create a single executable file.
-- Dynamic Linker:
-	-  
 - Static Linker:
 	- The process of combining two or more object codes into a single executable file is called static linking
 
