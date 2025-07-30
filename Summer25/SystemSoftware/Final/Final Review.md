@@ -2,8 +2,10 @@
 
 **What is an OS?**
 - An interrupt drive program
+
 **What is a VM?**
 - A software implementation of a hardware ISA
+
 **Assembler**
 - A program that translates assembly language into object code.
 
