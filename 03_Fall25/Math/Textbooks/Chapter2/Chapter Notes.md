@@ -5,27 +5,47 @@ One major idea is the idea of **"closure"**
 - What is the set of all things that can result from my proposed operations?
 
 ## Chapter 2.1 Systems of Linear Equations
-A system of linear equations:
-$$\begin{matrix}
-2x_1+3x_2+5x_3=1 \\
-4x_1-3x_2-7x_3=8 \\
-9x_1+5x_2-3x_3=2
-\end{matrix}$$
-can be represented through a matrix as follows:
-$$\left[
-\begin{matrix}
-2 & 3 & 5 \\
-4 & -2 & -7 \\
-9 & 5 & -3 
-\end{matrix}\right]
 
-\left[\begin{matrix}x_1\\x_2\\x_3\end{matrix}\right]
-=
-\left[\begin{matrix}1\\8\\2\end{matrix}\right]
+#### Geometric Vectors
+Object with direction and magnitude, any object that can be added to another of the same kind and produce a third one of the same kind and can be multiplied by a scalar to provide an object of the same kind.
+
+##### Vector Operations
+**Addition & Subtraction:**
+Addition & Subtraction is element wise and must be done between vectors that are of the same size.
+- $\hat{x} \pm \hat{y} = \hat{v}$
+
+**Scalar Multiplication:**
+This is the multiplication of every element within the vector by a scalar element $\lambda$, direction of the scale depends on the sign of the scalar element.
+- $\hat{v}=\lambda \hat{x}$
+
+#### Geometric Interpolation
+Assuming you have a problem that can be classified as a system of linear equations such as:
 $$
-Solving can be found in [[UCFNotes/03_Fall25/Math/Textbooks/Chapter2/Chapter Notes#Chapter 2.3 Solving Systems of Linear Equations|section 2.3]]
+\begin{matrix}
+a_1x_1+b_1x_2+c_1x_3=b_1\\
+a_2x_1+b_2x_2+c_2x_3=b_2\\
+a_3x_1+b_3x_2+c_3x_3=b_3
+\end{matrix}
+$$
+can be rewritten as:
+$$
 
+\begin{bmatrix}
+a_1x_1 & b_1x_2 & c_1x_3 \\
+a_2x_1 & b_2x_2 & c_2x_3 \\
+a_3x_1 & b_3x_2 & c_3x_3
+\end{bmatrix}
+\quad
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+b_3
+\end{bmatrix}
 
+$$
+Furthermore, we can then use row coordinates to solve for the the coordinates $b_1, b_2, \; \& \;b_3$.
+
+---
 ## Chapter 2.2 Matrices
 
 
@@ -114,7 +134,7 @@ $(AB)^-1=B^{-1}A^{-1}$
 $(A+B)^-1\neq A^{-1}+B^{-1}$
 
 ###### Calculating the inverse
-To compute the inverse $A^{-1}$ we need to find a matrix $X$ that satisfies $AX=I$. $\therefore$ Then, $X=A^-1$ so we solve $AI=X$ and reduce $A$ to row echelon form.
+To compute the inverse $A^{-1}$ we need to find a matrix $X$ that satisfies $AX=I$. $\therefore$ Then, $X=A^{-1}$ so we solve $AI=X$ and reduce $A$ to row echelon form.
 ##### Transpose Matrix
 $A^{T}$ can be obtained by writing the columns of $A$ as the rows of $A^{T}$
 ###### Properties:
@@ -131,6 +151,12 @@ $A^{T}$ can be obtained by writing the columns of $A$ as the rows of $A^{T}$
 ---
 
 ## Chapter 2.3 Solving Systems of Linear Equations
+
+#### Row Reduction
+A matrix has been reduced and is in **Row Echelon form** *iff*:
+- ***(a)*** All zeros rows are near the bottom
+- **(b)*** The first nonzero entry of a row, *a.k.a* as the leading entry, is always to the right of the leading entry in the row prior to it.
+
 To solve a system of linear equations using matrix transformations you utilize a small set of elementary transformations to help you solve the system.
 
 1) **Row Swap:** You can swap the location of rows
@@ -166,8 +192,6 @@ x_1+x_2+x_3+x_4=0 \\
 \right]
 
 \end{matrix}$$
-
-
 
 
 ---
@@ -226,11 +250,29 @@ Vector subspace is a **closed** set contained within the original vector space w
 ### 2.6.1 Generating Set and basis
 
 ### 2.6.2 Rank
-
-
+Definition:
+For a matrix $A\in\mathbb{R}^{m\times n},$ the rank is the number of linearly independent columns (rows). We write rank(A).
+- Just Row Reduce the matrix and the Rank is the # of linearly independent rows.
 
 
 ## Chapter 2.7 Linear Mappings
+A linear mapping is a specific type of mapping that preserves the structure of vector spaces, this then allows us to define the coordinate. We wish to preserve the property of scalar multiplication when applying the mapping: Consider two real vector spaces $V$ & $W$ and a linear mapping $\Phi: V\to W$ which, as said before, preserves the structure of the vector space **if:**
+
+$$
+\tag{2.85 \& 2.86}
+\begin{matrix}
+\Phi(x+y)=\Phi(x)+\Phi(y)\\
+\Phi(\lambda x)=\lambda \Phi (x)
+\end{matrix}
+$$
+**(Definition)** For vector spaces $V, W$ a mapping $\Phi:V \to W$ is called a linear mapping if:
+$$
+\tag{Definition}
+\forall x,y\in V\forall\lambda,\psi\in\mathbb{R}:\Psi(\lambda x+\psi y)=\lambda\Psi(x)+\psi
+\Psi(y)
+$$
+
+
 
 
 ### 2.7.1 Matrix Representation of Linear mappings
@@ -238,6 +280,7 @@ Vector subspace is a **closed** set contained within the original vector space w
 ### 2.7.2 Basis Change
 
 ### 2.7.3 Image and Kernel
+
 
 
 
