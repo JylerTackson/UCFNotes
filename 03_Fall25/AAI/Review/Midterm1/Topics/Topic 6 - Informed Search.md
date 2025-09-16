@@ -53,24 +53,40 @@ Don't stop when we add the goal to the fringe, only stop when we take out a node
 
 **Properties:**
 - **[[#**Optimal **|Optimal:]]** NO
-	- [[#Heuristics|Heuristics]] might lead you on a non-optimal path or goal.
-- **[[#**Spatial/Space Complexity**|Space]] & Time Complexity:** Range Between ($BFS\Longleftrightarrow DFS$)
-	- If the [[#Heuristics|heuristic]] is good, it can be any
-	- If the [[#Heuristics|heuristic]] is bad, closer to DFS or worse
-		- *Insight*: DFS and BFS are [[#Heuristics|heuristic]] search with particular [[#Heuristics|heuristic's]]
-- **[[#**Complete **|Complete:]]** NO
-	- If you are following the standard tree search algorithm, you will not get stuck, however; you can end up endlessly deep like in a DFS.
+	- [[#Heuristics|Heuristics]] might lead you on a non-optimal path or goal. We have to create an **[[#Admissible heuristics|admissible heuristic]]**.
+- $\mathbf{\text{A}^*}$ expands mainly towards the goal but also other directions, it shares properties of Greedy, which expands sharply towards what it thinks the goal is, and UCS which equally searches all directions.
 
-
+![[Pasted image 20250915160145.png]]
 
 
 
 ---
 ### Admissible heuristics
+**Inadmissible (pessimistic) [[#Heuristics|heuristics]]** break optimality by trapping good plans far down on the fringe mean while **admissible (optimistic) heuristics** never overweigh true costs:
+$$0\leq h(n)\leq h^*(n)$$
+- $h^*(n)\Rightarrow$ True cost to a nearest goal
 
+#### Creating admissible heuristics
+The **critical challenge in** $\mathbf{\text{A}^*}$ is coming up with a good [[#Admissible heuristics|admissible heuristic]]:
+- $h(n)=0$: Reverts A* back into UCS.
+- $h(n)=h^*(n)$: Straight to the goal.
 
+One way to get a good admissible heuristic is to use reduction. Solve a **relaxed problem** by creating an assumption such as "agent has the ability to fly". This now creates the ability to create an admissible heuristic of Euclidean Distance.
 
+---
+### Graph Search
+All previous searches were variations of tree search, **graph search's** main idea is that you neve expand a state twice. Before expanding a node, check if the state was expanded:
+- **Yes:** Skip
+- **No:** Expand and add to closed set
+	- Closed set used for **membership check only**, implement as **hashset**.
 
+**Properties:**
+- Any tree search can be converted to graph search.
+- **[[#**Spatial/Space Complexity**|Space]] Complexity:** Larger than Tree search due to implementation of closed set.
+- **[[#**Complete **|Complete:]]** YES
+	- Whatever states were previously expanded will be expanded again $\therefore$ the algorithm retains completeness
+- **[[#**Optimal **|Optimal:]]** Depends on Heuristics
+	- If we implement A* $\Rightarrow$ Graph Search we must have correct heuristics for an optimal search.
 
 
 
@@ -88,5 +104,8 @@ Don't stop when we add the goal to the fringe, only stop when we take out a node
 
 ###### **Spatial/Space Complexity**:
 - Measures the memory an algorithm needs relative to its input size to complete.
+
+###### **Heuristics:**
+- Formally defined as a **strategy or guideline** that helps you make progress toward a solution quickly, even if it doesn’t guarantee the _best_ or _perfect_ answer.
 
 ****
