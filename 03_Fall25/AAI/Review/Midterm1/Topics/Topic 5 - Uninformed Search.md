@@ -154,7 +154,6 @@ While [[#Breadth first tree search|bread first search]] finds the **shortest pla
 
 A variant of general tree search that assumes **actions have cost $\mathbf{c(a)}$**. For each node $n$, keep the cumulative cost of actions from the root $g(n)$. Implementing the **fringe as a priority queue**, investigate partial plans in **order of their costs**.
 
-
 **Effective Depth:**
 Assuming your cheapest solution has a cost of $C^*$ and each action has a cost of at least $\mathcal{E}$, the the deepest your search can be is $D_{eff}=\frac{C^*}{\mathcal{E}}$. If a node has been **expanded** and later on another node connects to that **previously expanded node** that node is **NOT** re added to the fringe.
 

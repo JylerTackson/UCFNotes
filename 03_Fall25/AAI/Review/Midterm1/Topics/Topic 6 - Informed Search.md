@@ -75,7 +75,7 @@ One way to get a good admissible heuristic is to use reduction. Solve a **relaxe
 
 ---
 ### Graph Search
-All previous searches were variations of tree search, **graph search's** main idea is that you neve expand a state twice. Before expanding a node, check if the state was expanded:
+All previous searches were variations of tree search, **graph search's** main idea is that you never expand a state twice. Before expanding a node, check if the state was expanded:
 - **Yes:** Skip
 - **No:** Expand and add to closed set
 	- Closed set used for **membership check only**, implement as **hashset**.

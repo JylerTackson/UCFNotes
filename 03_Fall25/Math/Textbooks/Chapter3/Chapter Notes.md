@@ -174,6 +174,17 @@ for lower and upper limits $a,b<\infty$ respectively.
 
 ### Gram-Schmidt Orthogonalization
 
+> [!Gram Schmidt] Gram - Schmidt Orthogonalization
+> The *Gram-Schmidt orthogonalization method* iteratively constructs an orthogonal basis $(u_1,...,u_n)$ from an basis $(b_1,...,b_n)$ of V as follows:
+> $$
+> \begin{align}
+> u_1:=\;&b_1&(3.67)\\
+> u_k:=\;&b_k-\pi_{span[u_1,...,u_{k-1}]}(b_k),\;\;\;k=2,...,n&(3.68)
+> \end{align}
+> $$
+> 
+> In **3.68**, the *k*th basis vector $(\mathbf{b_k})$ is projected onto the subspace spanned by the first $k-1$ orthogonal vectors that create the orthogonal basis.
+
 
 
 ### Projection onto Affine Subspaces

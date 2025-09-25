@@ -24,10 +24,13 @@ To show that $(\mathcal{G},\cdot)$ is a group and Abelian, I will firstly **(1)*
 	- This is a 4 step process:
 		1) **Closure** of $\mathcal{G}$ under $\otimes:\forall x, y\in \mathcal{G}: x\otimes y \in \mathcal{G}$
 		2) **Associativity**: $\forall x, y, z\in \mathcal{G}: (x\otimes y)\otimes z = x \otimes (y \otimes z)$
-		3) **Neutral** element: $\exists \; e\in \mathcal{g} \;\forall\; x \in \mathcal{G} : x \otimes r = x \text{ and } e\otimes x=x$
-		4) **Inverse** element: $\forall\; x \in \mathcal{G} \; \exists \; y \in \mathcal{G} : x\otimes y = e \text{ and } y \otimes x=e, \text{ where } e$ is the neutral element. We often write $x^{-1}$ to denote the inverse element of $x$.
+		3) **Neutral element**: $\exists \; e\in \mathcal{g} \;\forall\; x \in \mathcal{G} : x \otimes r = x \text{ and } e\otimes x=x$
+		4) **Inverse element**: $\forall\; x \in \mathcal{G} \; \exists \; y \in \mathcal{G} : x\otimes y = e \text{ and } y \otimes x=e, \text{ where } e$ is the neutral element. We often write $x^{-1}$ to denote the inverse element of $x$.
 
-	1) **Closure:** $x\otimes y \in\mathcal{g}$$$\tag{Define}A(x_1,y_1,z_1)\cdot A(x_2,y_2,z_2)\Rightarrow$$$$\tag{Matrix Mult} 
+ **Closure:** 
+	- To check for **closure** we check for: $x\otimes y \in\mathcal{g}$
+$$\tag{Define}A(x_1,y_1,z_1)\cdot A(x_2,y_2,z_2)\Rightarrow$$
+$$\tag{Matrix Mult} 
 			\begin{matrix}
 			\Biggl(\begin{matrix}
 			1&x_1&z_1\\
@@ -49,20 +52,22 @@ To show that $(\mathcal{G},\cdot)$ is a group and Abelian, I will firstly **(1)*
 			\end{matrix}
 			\Biggl]
 			\end{matrix}$$
-		- Furthermore, we know:
+
+Furthermore, we know:
 $$\tag{Proof}\begin{matrix}
 &x,y,z\in\mathbb{R}\therefore
 \\
 x_1+x_2\in\mathbb{R} & y_1+y_2\in\mathbb{R} & z_1+z_2+x_zy_2\in\mathbb{R}
 \end{matrix}$$
-	2) **Associativity:** $(x\otimes y)\otimes z=x\otimes (y\otimes z)$ 
-		$$\tag{Define}
+**Associativity:** 
+	- To check for **associativity** we check for: $(x\otimes y)\otimes z=x\otimes (y\otimes z)$
+$$\tag{Define}
 		\begin{matrix}
 		(x\cdot y)\cdot z
 		\\
 		(A(x_1,y_1,z_1)\cdot A(x_2,y_2,z_2))\cdot A(x_2,y_2,z_2)\Rightarrow
 		\end{matrix}$$
-		$$\tag{Matrix Mult} 
+$$\tag{Matrix Mult} 
 			\begin{matrix}
 			\Biggl(
 			\Biggl[\begin{matrix}
@@ -107,14 +112,14 @@ x_1+x_2\in\mathbb{R} & y_1+y_2\in\mathbb{R} & z_1+z_2+x_zy_2\in\mathbb{R}
 			\end{matrix}
 			\Biggl]
 			\end{matrix}$$
-		$$\tag{Define}
+$$\tag{Define}
 		\begin{matrix}
 		x\cdot(y\cdot z)
 		\\
 		A(x_1,y_1,z_1)\cdot
 		(A(x_2,y_2,z_2)\cdot A(x_3,y_3,z_3)) \Rightarrow
 		\end{matrix}$$
-		$$\tag{Matrix Mult} 
+$$\tag{Matrix Mult} 
 		
 			\begin{matrix}
 			\Biggl[\begin{matrix}
@@ -161,15 +166,14 @@ x_1+x_2\in\mathbb{R} & y_1+y_2\in\mathbb{R} & z_1+z_2+x_zy_2\in\mathbb{R}
 			\Biggl]
 			\end{matrix}
 		$$
+ **Neutral Element:**
+ - To check for the Neutral element we check for: $x\otimes r=x \text{ and } e\otimes x=x$
+	- Consider $e=\mathbb{I}^3$ . Thus both $e \text{ and } A \in \mathcal{G}$. Since $e=\mathbb{I}$ we know $A \cdot e = A \text{ and } e \cdot A = A \therefore$ we can conclude that $\mathcal{G}$ contains the Neutral Element. 
 
 
-
-	3) **Neutral Element:** $x\otimes r=x \text{ and } e\otimes x=x$
-		- Consider $e=\mathbb{I}^3$ . Thus both $e \text{ and } A \in \mathcal{G}$. Since $e=\mathbb{I}$ we know $A \cdot e = A \text{ and } e \cdot A = A \therefore$ we can conclude that $\mathcal{G}$ contains the Neutral Element. 
-
-
-	4) **Inverse Element:** $x\otimes y=e \text{ and } y\otimes x=e, \text{ where } e\rightarrow\text{ neutral element}$
-		$$\tag{Define}
+ **Inverse Element:**
+- To check for the Inverse Element we check for  $x\otimes y=e \text{ and } y\otimes x=e, \text{ where } e\rightarrow\text{ neutral element}$
+$$\tag{Define}
 		A=\left[
 		\begin{matrix}
 		1&x_1&z_1\\
@@ -177,8 +181,8 @@ x_1+x_2\in\mathbb{R} & y_1+y_2\in\mathbb{R} & z_1+z_2+x_zy_2\in\mathbb{R}
 		0&0&0
 		\end{matrix}
 		\right]$$
-		Solving for the inverse of $A$ provides us with the result:
-		$$\tag{Inverse}
+Solving for the inverse of $A$ provides us with the result:
+$$\tag{Inverse}
 		A=\left[
 		\begin{matrix}
 		1&-x_1&x_1y_1-z_1\\
@@ -196,16 +200,13 @@ x_1y_1-z_1\in\mathcal{G}\\
 -y_1\in\mathcal{G}
 \end{matrix}
 &
-
 \end{matrix}$$
-		- Then we can conclude that $\mathcal{G}$ contains the **Inverse Element**
-
+Then we can conclude that $\mathcal{G}$ contains the **Inverse Element**
 Finally, now that I have shown it is a group, we can show that the group is Abelian.
 
 3) Show that $(G,\cdot)$ is Abelian
 	- If additionally $\forall x, y \in \mathcal{G} : x\otimes y=y\otimes x$ then $G=(\mathcal{G},\otimes)$ is an *Abelian* group **(commutative)**.
-
-		I can disprove, the first example I tried within wolfram showed that this was false:
+	  I can disprove, the first example I tried within wolfram showed that this was false:
 $$
 \tag{Define}
 \begin{matrix}
@@ -286,7 +287,6 @@ $$
 
 
 ---
-
 ### ✔️Problem 2.5 $\star$
 
 Find the set $\mathcal{S}$ of all solutions in $x$ of the following inhomogeneous linear systems $Ax=b,$ where $A$ and $b$ are defined as follows:
@@ -414,7 +414,6 @@ $$
 
 
 ---
-
 ### ✔️Problem 2.8 $\star$
 Determine the inverses of the following matrices if possible:
 - **(b)** $\star$ Find the inverse matrix of $A$
@@ -428,6 +427,7 @@ A=\left[
 1&1&1&0
 \end{matrix}\right]
 $$
+
 $$
 \tag{Row Reduce 1}
 \left[
@@ -460,6 +460,7 @@ $$
 \end{matrix}
 \right]
 $$
+
 $$
 \tag{Row Reduce 2}
 \begin{matrix}
@@ -473,17 +474,8 @@ $$
 \end{matrix}
 &
 \left|
-\begin{matrix}
-{}
-\\
-{}
-\\
-{}
-\\
-{}
-\end{matrix}
-\right.
-&
+\begin{matrix}\\\\\\\end{matrix}
+\right.&
 \begin{matrix}
 1&0&0&0\\
 0&1&0&0\\
@@ -497,6 +489,7 @@ $$
 2) R_4=(-1)R_1+R_4
 \end{matrix}
 $$
+
 $$
 \tag{Row Reduce 3}
 \begin{matrix}
@@ -535,6 +528,7 @@ $$
 5) R_3\Longleftrightarrow R_4
 \end{matrix}
 $$
+
 $$
 \tag{Row Reduce 4}
 \begin{matrix}
@@ -575,6 +569,7 @@ $$
 \therefore
 \end{matrix}
 $$
+
 $$\tag{A\;2.8\;b}
 \begin{matrix}
 \text{The inverse matrix}
@@ -592,8 +587,8 @@ A^{-1}=
 \end{matrix}
 $$
 
----
 
+---
 ### ✔️Problem 2.9 $\star$
 Which of the following sets are subspaces of $\mathbb{R}^3$?
 - To check whether something is a subspace or not it must satisfy three things:
@@ -907,10 +902,7 @@ CA=
 \text{D is not closed under Scalar Multiplication.}
 \end{matrix}
 $$
-
-
 ---
-
 ### ✔️Problem 2.12 $\star$
 Consider two subspaces of $\mathbb{R}^4:$
 $$\tag{Q\;2.12}
@@ -1026,8 +1018,8 @@ M=
 1&-1&1&0
 \end{matrix}
 \right]
-
 $$
+
 - **(d)** Compute basis
 Where we can compute:
 $$
@@ -1067,7 +1059,6 @@ M_{(BASIS)}=\{x_1,\;x_2,\;x_3\}=
 $$
 
 ---
-
 ### ✔️Problem 2.16 $\star$
 Are the following mappings linear?
 According to the definition provided by the book, if a mapping is linear it preserves the following:
@@ -1091,25 +1082,29 @@ $$\tag{Q\;2.16\;a}\begin{matrix}
 \Phi:L^1([a,b])\to\mathbb{R}
 \\
 f\rightarrowtail\Phi(f)=\int^{b}_{a}f(x)dx,
+\\\\
+\text{Where } L^1([a,b]) \text{ denotes the set of integrable functions on } [a,b].
 \end{matrix}
-$$	where $L^1([a,b])$ denotes the set of integrable functions on $[a,b]$
+$$
 
-- **Vector Addition (2.85)**
-	We know: 
+**Vector Addition (2.85)**
+- We know: 
 	$$\tag{Define}\Phi(f)=\int^{b}_{a}f(x)dx$$
-	$\therefore$ if we try:
-	$$\tag{Add}\Phi(f+g)=\int^{b}_{a}(f(x)+g(x))dx=\int^{b}_{a}f(x)dx+\int^{b}_{a}g(x)dx=\Phi(f)+\Phi(g)$$
-	$\therefore \Phi$ holds under Vector Addition.
 
-- **Scalar Multiplication (2.86)**
-	We know:
+- $\therefore$ if we try:
+
+$$\tag{Add}\Phi(f+g)=\int^{b}_{a}(f(x)+g(x))dx=\int^{b}_{a}f(x)dx+\int^{b}_{a}g(x)dx=\Phi(f)+\Phi(g)$$
+- $\therefore \Phi$ holds under Vector Addition.
+
+**Scalar Multiplication (2.86)**
+- We know:
 $$
 \tag{Define}
 \Phi(f)=\int^{b}_{a}f(x)dx
 $$
-	$\therefore$ if we try:
-$$\tag{Mult}\Phi(\lambda f)=\int^{b}_{a}\lambda f(x)dx=\lambda\int^{b}_{a}f(x)dx=\lambda\Phi(f)$$
-	$\therefore$ $\Phi$ holds under Scalar Multiplication
+- $\therefore$ if we try:
+$$\tag{Mult}\Phi(\lambda f)=\int^{b}_{a}\lambda f(x)dx=\lambda\int^{b}_{a}f(x)dx=\lambda\Phi(f)$$	
+- $\therefore$ $\Phi$ holds under Scalar Multiplication
 
 
 Since both **Vector Addition** and **Scalar Multiplication** are **properties** of $\Phi$ we can say that **$\mathbf{\Phi}$ is a linear mapping**.
@@ -1124,21 +1119,23 @@ f\rightarrowtail\Phi(f)=f^\prime
 Where for $k \geq 1, C^k$ denotes the set of $k$ times continuously differentiable functions, and $C^0$ denotes the set of continuous functions.
 
 - **Vector Addition (2.85)**
-	We know: 
-	$$\tag{Define}\Phi(f)=f^\prime$$
-	$\therefore$ if we try:
-	$$\tag{Add}\Phi(f+g)=f^\prime+g^\prime=\Phi(f)+\Phi(g)$$
-	$\therefore \Phi$ holds under Vector Addition.
+We know: 
+$$\tag{Define}\Phi(f)=f^\prime$$
+$\therefore$ if we try:
+$$\tag{Add}\Phi(f+g)=f^\prime+g^\prime=\Phi(f)+\Phi(g)$$
+$\therefore \Phi$ holds under Vector Addition.
 
 - **Scalar Multiplication (2.86)**
-	We know:
+We know:
+
 $$
 \tag{Define}
 \Phi(f)=f^\prime
 $$
-	$\therefore$ if we try:
+
+$\therefore$ if we try:
 $$\tag{Mult}\Phi(\lambda f)=\lambda f^\prime=\lambda\Phi(f)$$
-	$\therefore$ $\Phi$ holds under Scalar Multiplication
+$\therefore$ $\Phi$ holds under Scalar Multiplication
 
 
 Since both **Vector Addition** and **Scalar Multiplication** are **properties** of $\Phi$ we can say that **$\mathbf{\Phi}$ is a linear mapping**.
