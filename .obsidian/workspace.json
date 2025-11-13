@@ -167,6 +167,43 @@
       "command-palette:Open command palette": false
     }
   },
+  "floating": {
+    "id": "b58511f484d693ce",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2e357e12a04d5b34",
+        "type": "window",
+        "children": [
+          {
+            "id": "92991797aa978cd1",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "a77279078c2d7fda",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "03_Fall25/Math/Textbooks/Chapter7/mmlBook-Chp7.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "mmlBook-Chp7"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 163,
+        "y": 282,
+        "width": 600,
+        "height": 1352,
+        "maximize": false,
+        "zoom": 1
+      }
+    ]
+  },
   "active": "36aed5f90aaeb45e",
   "lastOpenFiles": [
     "03_Fall25/Math/Textbooks/Chapter7/mmlBook-Chp7.pdf",

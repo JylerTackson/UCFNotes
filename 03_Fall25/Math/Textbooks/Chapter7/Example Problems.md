@@ -1,5 +1,5 @@
 - 7.3✔️
-- 7.4❌
+- 7.4✔️
 - 7.5❌
 - 7.6❌
 - 7.7❌
@@ -26,13 +26,23 @@ Consider whether the following statements are true or false:
 Consider whether the following statements are true or false:
 
 - a. The sum of any two convex functions is convex.
-	- If $f$ and $g$ are convex, then
+	- True
+		- Assuming you have two convex functions $f$ and $g$, and a third $h=f+g$
+		  To check for convexity of $h$ we can check that $h$ satisfies the convexity inequality.
+			- $f=(\lambda x + (1-\lambda)y)$
+			- $g=(\lambda x +(1-\lambda)y)$
+			- $h=f+g=f(\lambda x + (1-\lambda)y)+g(\lambda x + (1-\lambda)y)=h(\lambda x + (1-\lambda)y)$
+			  $h(\lambda x + (1-\lambda)y) \leq \lambda h(x) +(1-\lambda) h(y)$
+			  Which shows that convexity is preserved through addition.
 - b. The difference of any two convex functions is convex.
-    
+    - False
+	    - If we have $f=x^2$ and $g=2x^2$ the result of $f-g$ is a concave function.
 - c. The product of any two convex functions is convex.
-    
+	- False
+		- If we have $f=x^2$ and $g=(x+1)$, the product results in a non-convex function.
 - d. The maximum of any two convex functions is convex.
-    
+    - True
+	    - The pointwise maximum of convex functions remains convex
 
 ---
 
@@ -40,7 +50,7 @@ Consider whether the following statements are true or false:
 
 Express the following optimization problem as a standard linear program in matrix notation:
 
-$$\max_{x \in \mathbb{R}, \xi \in \mathbb{R}} \xi x + p$$
+$$\max_{x \in \mathbb{R}^2, \xi \in \mathbb{R}} p^T x + \xi$$
 
 subject to the constraints that:
 
