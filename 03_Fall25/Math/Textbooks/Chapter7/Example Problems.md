@@ -1,11 +1,3 @@
-- 7.3✔️
-- 7.4✔️
-- 7.5✔️
-- 7.6✔️
-- 7.7❌
-- 7.8❌
-
----
 ## Exercise 7.3
 
 Consider whether the following statements are true or false:
@@ -102,7 +94,7 @@ x_0\\x_1\\\xi
 \end{bmatrix}\leq3
 &&
 \begin{bmatrix}
-0&1&-1
+0&0&-1
 \end{bmatrix}
 \begin{bmatrix}
 x_0\\x_1\\\xi
@@ -123,7 +115,36 @@ b=\begin{bmatrix}
 \end{bmatrix}
 \end{matrix}
 $$
-Therefore, you know have all the elements needed to construct the Lagrangian and express the optimization problem as a linear program.
+Therefore, you know have all the elements needed to construct the Lagrangian and express the optimization problem as a linear program. The optimization problem expressed as a standard linear program is shown as follows: 
+
+$$
+\begin{align}
+\max_{\lambda\in\mathbb{R}^m}&\; -
+\begin{bmatrix}
+0&3&0
+\end{bmatrix}
+\begin{bmatrix}
+\lambda_0\\
+\lambda_1\\
+\lambda_2
+\end{bmatrix}\\
+\text{subject to }&\;
+\begin{bmatrix}
+p_0\\p_1\\1
+\end{bmatrix}+
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&-1
+\end{bmatrix}
+\begin{bmatrix}
+\lambda_0\\
+\lambda_1\\
+\lambda_2
+\end{bmatrix}=0\\
+&\; \lambda\geq0
+\end{align}
+$$
 
 ---
 ## Exercise 7.6
@@ -155,67 +176,93 @@ $$
 
 Derive the dual linear program using Lagrange duality.
 
-The first thing I would like to do is rewrite the problem to remove the negative sign in front of the cost vector, to do this we can rewrite the $\min$ problem as a $\max$ by doing the following:
-$$
-\min_{x \in \mathbb{R}^2} -\begin{bmatrix} 5 \\ 3 \end{bmatrix}^{\top} \begin{bmatrix} x_1\\x_2 \end{bmatrix}
-\Longrightarrow
-\max_{x \in \mathbb{R}^2} \begin{bmatrix} 5 \\ 3 \end{bmatrix}^{\top} \begin{bmatrix} x_1\\x_2 \end{bmatrix}
-$$
-We can also take it a step further, since these are not large matrices, to rewrite this as a linear equations:
-$$
-\begin{align}
-\max_{x \in \mathbb{R}^2} 5x_1+3x_2 \\
-s.t. Ax\leq b
-\end{align}
-$$
-
-The next step in deriving the dual linear program is defining the variables we did in the prior problem so we can properly define our Lagrangian. This problem provides us with constraints that make this easy for us, by that I mean we are able to do following:
-$$
-x=\begin{bmatrix}
-x_1\\x_2
-\end{bmatrix},\;
-c=\begin{bmatrix}
-5\\3
-\end{bmatrix},\;
-A=
-\begin{bmatrix}
-2&2\\
-2&-4\\
--2&1\\
-0&-1\\
-0&1
-\end{bmatrix},\;
-b=\begin{bmatrix}
-33\\8\\5\\-1\\8
-\end{bmatrix}
-$$
-Continuing the the derivation, I will next set up the Lagrangian w.r.t to both $x_1$ and $x_2$. Following the general formula for the Lagrangian from the textbook, for a maximization problem:
+The textbook provides a definition for the Lagrangian which is written as follows:
 $$
 \tag{7.40}
-\mathcal{L}(x,\lambda)=c^\top x+\lambda^\top(b-Ax)
-$$
-We can plug in our values for $c, x^\top$ as well as the $5$ constraints defined to create the following Lagrangian:
-$$
 \begin{align}
-\mathcal{L}(x_1,x_2,\lambda)= &\; c^\top x\\+&\;
-\lambda_1\big(33-(2x_1+2x_2)\big)\\+&\;
-\lambda_2\big(8-(2x_1-4x_2)\big)\\+&\;
-\lambda_3\big(5-(-2x_1+x_2)\big)\\+&\;
-\lambda_4\big(-1-(-1x_2)\big)\\+&\;
-\lambda_5\big(8-(1x_2)\big)
+\mathcal{L}(x,\lambda)=c^\top x +\lambda^\top (Ax-b)
 \end{align}
 $$
-Finally to finish deriving the dual linear program using Lagrange duality you take the derivative of $\mathcal{L}(x_1,x_2,\lambda)$ w.r.t to both $x_1$ and $x_2$ providing you with the Lagrange duality.
+Furthermore, it then goes on to provide a formal definition for the derivative of the $\mathcal{L}(x,\lambda)$ w.r.t $x$ which is defined as follows:
 $$
+\tag{7.42}
+c+A^\top\lambda = 0
+$$
+Therefore, rewrite the above equation to define our dual Lagrangian as follows:
+$$
+\mathcal{D}(\lambda)=-\lambda^\top b
+$$
+The textbook states that the goal within the Dual Lagrangian is to maximize the $D(\lambda)$ w.r.t the constrains provided in the equation, therefore it defines the dual Lagrangian as Linear program as follows:
+$$
+\tag{7.43}
 \begin{align}
-\tag{D1}
-\frac{d\mathcal{L}}{dx_1}\Rightarrow&\;
-5-2\lambda_1-2\lambda_2+2\lambda_3=0\\\\
-\tag{D2}
-\frac{d\mathcal{L}}{dx_2}\Rightarrow&\;
-3-2\lambda_1 +4\lambda_2-\lambda_3+\lambda_4-\lambda_5=0
+\max_{\lambda\in\mathbb{R}^m}&\; -b^\top\lambda\\
+\text{subject to }&\; c+A^\top \lambda=0\\
+&\; \lambda \geq 0
 \end{align}
 $$
+Defining our terms from the problem statement we get the following
+$$
+\begin{align}
+b^\top =&\;
+\begin{bmatrix}
+33 \\
+8 \\
+5 \\
+-1 \\
+8
+\end{bmatrix}\\\\
+c =&\;
+\begin{bmatrix}
+-5 \\
+-3
+\end{bmatrix}\\\\
+A= &\;
+\begin{bmatrix}
+2 & 2 \\
+2 & -4 \\
+-2 & 1 \\
+0 & -1 \\
+0 & 1 \\
+\end{bmatrix}
+\end{align}
+$$
+and finally we can define our dual Lagrangian linear program:
+$$
+\begin{align}
+\max_{\lambda\in\mathbb{R}^m}&\; 
+-\begin{bmatrix}
+33 &
+8 &
+5 &
+-1 &
+8
+\end{bmatrix}
+\begin{bmatrix}
+\lambda_0 \\
+\lambda_1 \\
+\lambda_2 \\
+\lambda_3 \\
+\lambda_4
+\end{bmatrix}\\
+\text{subject to }&\; 
+\begin{bmatrix}
+-5 \\
+-3
+\end{bmatrix}+
+\begin{bmatrix}
+2&2&-2&0&0\\
+2&-4&1&-1&1
+\end{bmatrix} 
+\begin{bmatrix}
+\lambda_0 \\
+\lambda_1 \\
+\lambda_2 \\
+\lambda_3 \\
+\lambda_4
+\end{bmatrix}=0\\
+&\; \lambda \geq 0
+\end{align}$$
 
 ---
 
@@ -239,14 +286,243 @@ x_{2}
 
 Derive the dual quadratic program using Lagrange duality.
 
+![[Pasted image 20251115132615.png]]
+The textbook provides an illustration of exercise 7.7 as shown above. In the figure we can see a darkened gray box which indicates where are constraints are being placed within the quadratic program. Furthermore, this allows us to infer that visually the minimization will occur within this gray box.
+
+The textbook defines a convex quadratic object function, where the constraints are affine. as follows:
+$$
+\begin{align}\tag{7.45}
+\min_{x\in\mathbb{R}^d}&\; \frac{1}{2}x^\top Q x +c^\top x \\
+\text{subject to }&\; Ax\leq b
+\end{align}
+$$
+Furthermore, it goes on to define the elements of this function as follows:
+- $A\in \mathbb{R}^{m\times d}$
+- $b\in \mathbb{R}^m$
+- $c\in \mathbb{R}^d$
+- $Q\in \mathbb{R}^{d\times d}$
+	- Where $Q$ is a square symmetric matrix that is positive definite making the objective function convex
+- $d$ is the # of variables
+- $m$ is the # linear constraints
+
+The textbook then goes on to define the Lagrangian for a Quadratic program as follows:
+$$
+\begin{align}
+\tag{7.48a}
+\mathcal{L}(x,\lambda)=&\; \frac{1}{2} x^\top Qx + c^\top x+\lambda^\top(Ax-b)
+\\\\
+\tag{7.48b}
+=&\;
+\frac{1}{2} x^\top Qx + (c + A^\top \lambda)^\top x -\lambda^\top b
+\end{align}
+$$
+Then, the textbook provides us with formal definitions for the derivative of $\mathcal{L}(x,\lambda)$ w.r.t $x$:
+$$
+\tag{7.49}
+Qx+(c+A^\top \lambda)=0
+$$
+Solving for x we get:
+$$
+\tag{7.50}
+x=-Q^{-1} (c+A^\top \lambda)
+$$
+Substituting the equation we get for $x$ into $\mathcal{L}(x,\lambda)$ provides us with the formal definition of the Dual Lagrangian of a Quadratic Function:
+$$
+\tag{7.51}
+\mathcal{D}(\lambda)=-\frac{1}{2}(c+A^\top\lambda)^\top Q^{-1}(c+A^\top \lambda)-\lambda^\top b
+$$
+Finally, the textbook defines the dual optimization problem of a quadratic function as follows:
+$$
+\tag{7.52}
+\begin{align}
+\max_{\lambda\in\mathbb{R}^m}&\; -\frac{1}{2} (c+A^\top\lambda)^\top Q^{-1} (c+A^\top\lambda) -\lambda^\top b\\
+\text{subject to }&\; \lambda\geq 0
+\end{align}
+$$
+Defining our terms from the problem statement we get the following:
+- $Q\Longrightarrow \begin{bmatrix}2&1\\1&4\end{bmatrix}$
+- $c\Longrightarrow \begin{bmatrix}5\\3\end{bmatrix}$
+- $A\Longrightarrow \begin{bmatrix}1 & 0 \\1 & 0 \\0 & 1 \\0 & -1\end{bmatrix}$
+- $b\Longrightarrow \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}$
+Solving for the unknows we get:
+$$
+\begin{align}
+A^\top\lambda=&\; 
+\begin{bmatrix}
+1&1&0&0\\
+0&0&1&-1
+\end{bmatrix}
+\begin{bmatrix}
+\lambda_0\\
+\lambda_1\\
+\lambda_2\\
+\lambda_3
+\end{bmatrix}
+\\
+=&\;
+\begin{bmatrix}
+\lambda_0 + \lambda_1 \\
+\lambda_2 - \lambda_3
+\end{bmatrix}
+\end{align}
+$$
+$$
+\begin{align}
+Q^{-1}=&\;
+\begin{bmatrix}
+\frac{4}{7}&-\frac{1}{7} \\
+-\frac{1}{7}&\frac{2}{7}
+\end{bmatrix}
+\end{align}
+$$
+
+Now plugging into equation $7.51$ for the Dual Lagrangian of a Quadratic Function we get:
+$$
+\mathcal{D}(\lambda)=-\frac{1}{2}
+\left(
+\begin{bmatrix}5\\3\end{bmatrix}
++\begin{bmatrix}
+\lambda_0 + \lambda_1 \\
+\lambda_2 - \lambda_3
+\end{bmatrix}
+\right)^\top 
+\begin{bmatrix}
+\frac{4}{7}&-\frac{1}{7} \\
+-\frac{1}{7}&\frac{2}{7}
+\end{bmatrix}
+\left(
+\begin{bmatrix}5\\3\end{bmatrix}
++\begin{bmatrix}
+\lambda_0 + \lambda_1 \\
+\lambda_2 - \lambda_3
+\end{bmatrix}
+\right)-
+\begin{bmatrix}
+\lambda_0&
+\lambda_1&
+\lambda_2&
+\lambda_3
+\end{bmatrix}
+\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}
+$$
+Finally the dual quadratic program using Lagrange duality can be expressed as the following:
+$$
+\begin{align}
+\max_{\lambda\in\mathbb{R}^m}&\; -\frac{1}{2}
+\left(
+\begin{bmatrix}5\\3\end{bmatrix}
++\begin{bmatrix}
+\lambda_0 + \lambda_1 \\
+\lambda_2 - \lambda_3
+\end{bmatrix}
+\right)^\top 
+\begin{bmatrix}
+\frac{4}{7}&-\frac{1}{7} \\
+-\frac{1}{7}&\frac{2}{7}
+\end{bmatrix}
+\left(
+\begin{bmatrix}5\\3\end{bmatrix}
++\begin{bmatrix}
+\lambda_0 + \lambda_1 \\
+\lambda_2 - \lambda_3
+\end{bmatrix}
+\right)-
+\begin{bmatrix}
+\lambda_0&
+\lambda_1&
+\lambda_2&
+\lambda_3
+\end{bmatrix}
+\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}\\
+\text{subject to }&\; \lambda\geq 0
+\end{align}$$
+
+
 ---
 
 ## Exercise 7.8
 
 Consider the following convex optimization problem:
 
-$$\min_{w\in\mathbb{R}^{D}} \frac{1}{2} w^{\top} w$$
-
-subject to $w^{\top} x \ge 1$.
+$$
+\begin{align}
+\min_{w\in\mathbb{R}^{D}}&\; \frac{1}{2} w^{\top} w\\
+\text{subject to}&\; w^{\top} x \ge 1
+\end{align}
+$$
 
 Derive the Lagrangian dual by introducing the Lagrange multiplier $\lambda$.
+
+To begin, the textbook states that "the idea of a Lagrange multiplier is to **replace** the step function with a linear function." Our current primal function is shown above in the problem as the function we are trying to minimize.  The textbook then defines the Lagrangian by introducing the Lagrange multipliers $\lambda_i \geq 0$ corresponding to each inequality constraint respectively s.t:
+$$
+\begin{align}
+\tag{7.20a}
+\mathcal{L}(x,\lambda) =&\; f(x)+\sum_{i=1}^m\lambda_ig_i(x)
+\\
+\tag{7.20b}
+&\; = f(x) + \lambda^\top g(x)
+\end{align}
+$$
+The textbook then goes on to state the formal definition of the *primal problem* as well as the associated *Lagrangian dual problem*. For conciseness I will state that the primal problem is our $\min$ optimization problem stated above and the *Lagrangian dual problem* definition is as follows:
+$$
+\tag{7.22}
+\begin{align}
+\max_{\lambda\in\mathbb{R}^m}&\; \mathcal{D}(\lambda)\\
+\text{Subject to }&\; \lambda \geq 0,
+\end{align}
+$$
+where $\lambda$ are the dual variables and $\mathcal{D}(\lambda)=\min_{x\in\mathbb{R}^d}\mathcal{L}(x,\lambda)$.
+
+Now that we have properly defines we can start deriving our terms. To begin, we first need to solve for our step function which is done simply by doing the following:
+$$
+\begin{align}
+\text{Constraint:} &\;\; w^{\top} x \ge 1\\
+\text{Rewrite:} &\;\; 1- w^{\top} x \le 0\\\therefore\\
+g(w)=&\; 1- w^{\top} x
+\end{align}
+$$
+Furthermore, we already have $f(x)$ defined from the problem statement and $\lambda$ are the dual variables therefore we can now create are Lagrangian as follows;
+$$
+\begin{align}
+\mathcal{L}(w,\lambda)= &\; f(w) + \lambda^\top g(w)\\
+=&\; \left(\frac{1}{2} w^{\top} w\right) + \lambda^\top \left(1- w^{\top} x\right)
+\end{align}
+$$
+The dual function can now be found by doing the following:
+$$
+\begin{align}
+\mathcal{D}(\lambda)=&\; \min_{w\in\mathbb{R}^d}\mathcal{L}(w,\lambda)\\
+=&\; \min_{w\in\mathbb{R}^d} \left(\frac{1}{2} w^{\top} w\right) + \lambda^\top \left(1- w^{\top} x\right)\\
+=&\; \min_{w\in\mathbb{R}^d} \frac{1}{2} w^{\top} w - w^{\top} x\lambda^\top + \lambda^\top\\
+\end{align}
+$$
+It is important to note that the constraint $w^{\top} x \ge 1$ defines our dot product of $w$ and $x$ meaning that we know both $w,x\in\mathbb{R}^D$ with that being said we know that $g(w)$ is then just a scalar value as well as $\lambda$ (single $\lambda$ value). We can now continue solving the dual function by minimizing the Lagrangian, to do this we will take the derivative of $\mathcal{L}(x,\lambda)$ w.r.t $w$:
+$$
+\begin{align}
+\nabla_w\mathcal{D}(\lambda) =&\; \min_{w\in\mathbb{R}^d} \frac{1}{2} w^{\top} w - w^{\top} x\lambda^\top + \lambda^\top\\
+=&\; w-x\lambda
+\end{align}
+$$
+Setting that equal to zero and solving for $w$ we get:
+$$
+\begin{align}
+w-x\lambda =&\; 0\\
+w=x\lambda
+\end{align}
+$$
+Plugging back in to $\mathcal{D}(\lambda)$ for w we get:
+$$
+\begin{align}
+\mathcal{D}(\lambda) =&\; 
+\frac{1}{2} w^{\top} w - w^{\top} x\lambda^\top + \lambda^\top \\
+=&\;
+\frac{1}{2} \lambda^2 x^\top x-\lambda^2 x^\top x+\lambda \\
+=&\;
+-\frac{1}{2} \lambda^2 x^\top x + \lambda
+\end{align}
+$$
+Finally, we are able to derive the Lagrangian dual by maximizing $\mathcal{D}(\lambda)$:
+$$
+\max_{\lambda\geq0}
+-\frac{1}{2} \lambda^2 x^\top x + \lambda
+$$
