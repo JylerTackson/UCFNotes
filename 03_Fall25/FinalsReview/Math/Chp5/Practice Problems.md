@@ -1,4 +1,3 @@
-### Problem 5.1
 Compute the derivative $f^\prime(x)$ for:
 $$f(x)=log(x^4)sin(x^3)$$
 
@@ -54,3 +53,35 @@ where sin$(\cdot)$ is applied to every element of $z$.
 ### Problem 5.8
 Compute the derivatives $\frac{df}{dx}$ of the following functions. Describe your steps in detail.
 1) Use the chain rule. Provide the dimensions of every single partial derivative
+$$
+\begin{align}
+f(z) = &\; exp(-\frac{1}{2}z)\\
+z = &\; g(y) = y^\top S^{-1} y\\
+y = &\; h(x) = x - \mu
+\end{align}
+$$
+where $x,\mu\in \mathbb{R}^D$, $S\in \mathbb{R}^{D\times D}$
+2) $f(x)=tr(xx^\top + \sigma^2 I), x\in \mathbb{R}^D$
+3) Use the chain rule. Provide the dimensions of every single partial derivative. You do not need to compute the product of the partial derivatives explicitly
+$$
+\begin{align}
+f=&\;tanh(z)\in\mathbb{R}^M \\
+z=&\;Ax+b \\ 
+x\in \mathbb{R}^N, A\in &\;\mathbb{R}^{M\times N}, b\in \mathbb{R}^M
+\end{align}
+$$
+tanh is applied to every component of $z$.
+
+---
+### Problem 5.9
+We define
+$$
+\begin{align}
+g(x,z,v) &\;:=log\; p(x,z) - log \; p(z,v)\\
+z&\;:= t(\epsilon, v)
+\end{align}
+$$
+for differentiable function $p,q,t$ and $x\in \mathbb{R}^D, z\in\mathbb{R}^E, v\in\mathbb{R}^F, \epsilon \in \mathbb{R}^G$. By using the chain rule, compute the gradient
+$$
+\frac{d}{dv} g(x,z,v)
+$$
