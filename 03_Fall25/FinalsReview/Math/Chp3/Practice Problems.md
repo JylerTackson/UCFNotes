@@ -5,6 +5,8 @@ $$
 $$
 is an inner product.
 
+
+
 ---
 ### Problem 3.2
 Consider $\mathbb{R}^2$ with $\langle \cdot,\cdot \rangle$ defined for all $x$ and $y$ in $\mathbb{R}^2$ as

@@ -97,3 +97,20 @@ Consider vector spaces $V,W$ with corresponding bases $B,C$
 
 ---
 ### Theorem 2.20 - Basis Change
+For a linear mapping $\Phi:V\to W$ the corresponding transformation matrix $\bar{A}_\Phi$ with respect to the bases $\bar{B}$ and $\bar{C}$ is given as:
+$$
+\bar{A}_\Phi=T^{-1}A_\Phi S
+$$
+---
+### Theorem 2.24 - Rank-Nullity Theorem
+For vector spaces $V,W$ and a linear mapping $\Phi: V\to W$ it holds that 
+$$
+dim(ker(\Phi))+dim(Im(\Phi))=dim(V)
+$$
+---
+### Definition 2.25 - Affine Subspace
+Let $V$ be a vector space $x_0 \in V$ and $U \subseteq V$ a subspace. Then the subset:
+$$
+L=x_o+U
+$$
+is called affine subspace or linear manifold of $V$.
