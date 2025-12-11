@@ -16,7 +16,7 @@ Where:
 2) Evaluate the function at the endpoints of each subinterval
 3) Approximate the integral as follows:
 $$
-\int_a^b f(x)dx \simeq h\frac{[f(a)+f(b)]}{2} + \sum f(x_k)
+\int_a^b f(x)\,dx \approx \frac{h}{2}\left[f(a) + 2\sum_{k=1}^{n-1} f(x_k) + f(b)\right]
 $$
 4) Increase $n$ for higher accuracy
 Provides higher accuracy, second-order compared to rectangular rule.

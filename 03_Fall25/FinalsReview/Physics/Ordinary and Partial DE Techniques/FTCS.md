@@ -20,4 +20,4 @@ Using FTCS solve the following 1D diffusion equation on the spatial domain $[0,1
 $$
 \frac{\partial u}{\partial t}=\alpha \frac{\partial^2 u}{\partial x^2}
 $$
-Given an initial condition of $u(x,0)=sin(\pi x)$, compute the value of $u$ at $t=0$ and $0.01$ seconds.
+Given an initial condition of $u(x,0)=sin(\pi x)$, compute the value of $u$ at $t=0$ and $0.01$ seconds. **Conditionally stable** and an explicit method. **Explicit** time stepping.

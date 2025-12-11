@@ -15,7 +15,7 @@ x_{n+1} \simeq &\; x_n +  h
 \end{align}
 $$
 4) Repeat until the desired $x$ value is reached
-Forward Euler is a low accuracy, **first-order method**, that requires small step sizes.
+Forward Euler is a low accuracy, **first-order method**, that requires small step sizes. Can be unstable for stiff equations making this **conditionally stable**. Requires small time steps making this an **explicit method**.
 
 ---
 Backwards Euler is an implicit numerical technique for solving ODE's, it operates by using the value of the function at the next time step to update the solution.
@@ -30,4 +30,4 @@ $$
 y_{n+1}\simeq y_n + hf(x_{n+1}, y_{n+1})
 $$
 4) Use a numerical method, such as newtons method, to computer $y_{n+1}$
-Unconditionally stable, suitable for stiff equations, and provides more accurate solutions for larger time steps than the Forward Euler.
+**Unconditionally stable**, suitable for stiff equations, and provides more accurate solutions for larger time steps than the Forward Euler. Performs better with larger time steps then the explicit method making this an **implicit method**.

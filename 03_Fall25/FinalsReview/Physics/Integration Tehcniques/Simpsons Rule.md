@@ -22,3 +22,4 @@ $$
 \int_a^b f(x)dx \simeq \frac{h}{3} \left\{ [f(a)+f(b)] + ... 4\sum f(\text{odd midpoints}) + 2\sum f(\text{even midpoints}) \right\}
 $$
 4) Increase $n$ for higher accuracy
+Fourth Order accurate due to you evaluating 4 different function values to evaluate the Simpson rule.

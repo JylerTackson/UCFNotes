@@ -17,3 +17,4 @@ To begin you want to start by solving for $r$ using the equation and constants p
 $$
 r={\alpha}\;\frac{\Delta t}{\Delta x^2}={0.1}\frac{0.05}{0.1^2}=5
 $$
+Combines both **explicit and implicit** time stepping rules.
