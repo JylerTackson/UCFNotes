@@ -118,3 +118,22 @@ Define duck typing in Python and provide an example.
 State the amortized time complexity of list.append() and explain why.
 Write a generator function yielding squares from 0 to n.
 Explain why immutability (e.g., tuple) is beneficial for hashing or concurrency.
+
+---
+
+You want to list each user’s name and the total number of orders they have placed. Users with **zero** orders should also appear with a count of `0`. Which SQL query best accomplishes this?
+
+```sql
+SELECT u.name, COUNT(o.id) AS num_orders
+FROM users AS u
+LEFT JOIN orders AS o
+  ON o.user_id = u.id
+GROUP BY u.name
+```
+
+
+`LEFT JOIN` will keep all the rows even if there is not a matching one, that is how the users with zero orders will appear.
+`
+
+---
+
