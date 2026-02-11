@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3106066681f45b4c",
+        "id": "4f9c56e2447c410f",
         "type": "tabs",
         "children": [
           {
-            "id": "4bf3f48d8e79879c",
+            "id": "d65b9aebd9d2e3cc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Voloridge/Practice Test.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Practice Test"
+              "title": "New tab"
             }
           }
         ]
@@ -168,31 +164,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4bf3f48d8e79879c",
+  "active": "d65b9aebd9d2e3cc",
   "lastOpenFiles": [
-    "Voloridge/Practice Tests.md",
-    "Voloridge/Practice Test.md",
-    "Voloridge/RESTful/RESTful API.md",
+    "04_Spring26/PPC/Assignment 1.md",
+    "04_Spring26/PPC/The Art of Multiprocessor Programming, Second Edition [2nd -- Maurice Herlihy, Nir Shavit, Victor Luchangco, Michael Spear -- ( WeLib.org ).pdf",
+    "Interview",
+    "04_Spring26/PPC/Untitled",
+    "Interview/Voloridge/Practice Test.md",
+    "Interview/Voloridge/Practice Tests.md",
+    "Interview/Voloridge/RESTful/RESTful API.md",
     "Voloridge/Untitled",
-    "Voloridge/RESTful/FETCH practice.md",
-    "Voloridge/Pandas/Pandas Practice.md",
-    "Voloridge/RESTful",
-    "Voloridge/Pandas/Intro to Pandas.md",
+    "Interview/Voloridge/RESTful/FETCH practice.md",
+    "Interview/Voloridge/Pandas/Pandas Practice.md",
+    "Interview/Voloridge/RESTful",
+    "Interview/Voloridge/Pandas/Intro to Pandas.md",
     "Kaggle/NumPy/NumPy Practice.md",
-    "Voloridge/SQL/SQL Practice.md",
-    "Voloridge/SQL/Intro to SQL.md",
-    "Voloridge/Pandas",
+    "Interview/Voloridge/SQL/SQL Practice.md",
+    "Interview/Voloridge/SQL/Intro to SQL.md",
+    "Interview/Voloridge/Pandas",
     "Kaggle/NumPy",
-    "Voloridge/RESTful",
-    "Voloridge/SQL/Images/Pasted image 20251208191811.png",
-    "Voloridge/SQL/Images",
-    "Voloridge/SQL/Images/Pasted image 20251209201858.png",
-    "Voloridge/SQL/Images/Pasted image 20251209161432.png",
-    "Voloridge/SQL/Images/Pasted image 20251209160309.png",
+    "Interview/Voloridge/RESTful",
+    "Interview/Voloridge/SQL/Images/Pasted image 20251208191811.png",
+    "Interview/Voloridge/SQL/Images",
+    "Interview/Voloridge/SQL/Images/Pasted image 20251209201858.png",
+    "Interview/Voloridge/SQL/Images/Pasted image 20251209161432.png",
+    "Interview/Voloridge/SQL/Images/Pasted image 20251209160309.png",
     "03_Fall25/Math/Textbooks/Chapter6/mmlBook-Chp6.pdf",
-    "Voloridge/SQL",
-    "Voloridge",
-    "Untitled.base",
     "03_Fall25/Math/Textbooks/Chapter6/Chapter Notes.md",
     "03_Fall25/Math/Textbooks/Chapter6/Example Problems.md",
     "03_Fall25/Math/Textbooks/Chapter7/Chapter Notes.md",
@@ -208,8 +205,6 @@
     "03_Fall25/FinalsReview/Physics/Integration Tehcniques/Quadrature.md",
     "03_Fall25/FinalsReview/Physics/Integration Tehcniques/Simpsons Rule.md",
     "03_Fall25/FinalsReview/Physics/Integration Tehcniques/Trapezoid Rule.md",
-    "03_Fall25/FinalsReview/Physics/Matrix Decomposition/Gaussian Elimination.md",
-    "03_Fall25/FinalsReview/Physics/Ordinary and Partial DE Techniques/Crank-Nicolson.md",
     "03_Fall25/FinalsReview/Math/mathExamNotes.jpg",
     "03_Fall25/Math/Textbooks/Chapter3/Desmos _ 3D Graphing Calculator-1.png",
     "03_Fall25/Math/Textbooks/Chapter7/Pasted image 20251115132615.png",
