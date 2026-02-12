@@ -6,6 +6,7 @@
       {
         "id": "4f9c56e2447c410f",
         "type": "tabs",
+        "dimension": 43.09153713298791,
         "children": [
           {
             "id": "d65b9aebd9d2e3cc",
@@ -19,6 +20,25 @@
               },
               "icon": "lucide-file",
               "title": "Chapter 1 Notes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "062c3fdd325a6ecd",
+        "type": "tabs",
+        "dimension": 56.90846286701209,
+        "children": [
+          {
+            "id": "553e141b70d72e12",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "04_Spring26/PPC/The Art of Multiprocessor Programming, Second Edition [2nd -- Maurice Herlihy, Nir Shavit, Victor Luchangco, Michael Spear -- ( WeLib.org ).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "The Art of Multiprocessor Programming, Second Edition [2nd -- Maurice Herlihy, Nir Shavit, Victor Luchangco, Michael Spear -- ( WeLib.org )"
             }
           }
         ]
@@ -168,55 +188,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "00e554eed49a1367",
-    "type": "floating",
-    "children": [
-      {
-        "id": "e64499c6b02969f8",
-        "type": "window",
-        "children": [
-          {
-            "id": "a6a22434a2f46118",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2fda3908b82bd86d",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "04_Spring26/PPC/The Art of Multiprocessor Programming, Second Edition [2nd -- Maurice Herlihy, Nir Shavit, Victor Luchangco, Michael Spear -- ( WeLib.org ).pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "The Art of Multiprocessor Programming, Second Edition [2nd -- Maurice Herlihy, Nir Shavit, Victor Luchangco, Michael Spear -- ( WeLib.org )"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 33,
-        "width": 757,
-        "height": 891,
-        "maximize": false,
-        "zoom": -2.5
-      }
-    ]
-  },
-  "active": "d65b9aebd9d2e3cc",
+  "active": "553e141b70d72e12",
   "lastOpenFiles": [
-    "04_Spring26/PPC/The Art of Multiprocessor Programming, Second Edition [2nd -- Maurice Herlihy, Nir Shavit, Victor Luchangco, Michael Spear -- ( WeLib.org ).pdf",
     "04_Spring26/PPC/Chp1/Chapter 1 Notes.md",
+    "04_Spring26/PPC/The Art of Multiprocessor Programming, Second Edition [2nd -- Maurice Herlihy, Nir Shavit, Victor Luchangco, Michael Spear -- ( WeLib.org ).pdf",
+    "Untitled.md",
     "04_Spring26/PPC/Assignment 1.md",
-    "04_Spring26/PPC/Untitled",
-    "04_Spring26/PPC/Chp7",
-    "04_Spring26/PPC/Chp5",
-    "04_Spring26/PPC/Chp3",
-    "04_Spring26/PPC/Chp2",
     "04_Spring26/PPC/Chp1",
     "Interview",
+    "04_Spring26/PPC/Untitled",
     "Interview/Voloridge/Practice Test.md",
     "Interview/Voloridge/Practice Tests.md",
     "Interview/Voloridge/RESTful/RESTful API.md",
@@ -228,7 +208,11 @@
     "Kaggle/NumPy/NumPy Practice.md",
     "Interview/Voloridge/SQL/SQL Practice.md",
     "Interview/Voloridge/SQL/Intro to SQL.md",
+    "Interview/Voloridge/Pandas",
+    "Kaggle/NumPy",
+    "Interview/Voloridge/RESTful",
     "Interview/Voloridge/SQL/Images/Pasted image 20251208191811.png",
+    "Interview/Voloridge/SQL/Images",
     "Interview/Voloridge/SQL/Images/Pasted image 20251209201858.png",
     "Interview/Voloridge/SQL/Images/Pasted image 20251209161432.png",
     "Interview/Voloridge/SQL/Images/Pasted image 20251209160309.png",
@@ -245,7 +229,6 @@
     "03_Fall25/FinalsReview/Physics/Derivative Approximation/FBC Difference.md",
     "03_Fall25/FinalsReview/Physics/Integration Tehcniques/Midpoint and Rectangle Rule.md",
     "03_Fall25/FinalsReview/Physics/Integration Tehcniques/Quadrature.md",
-    "03_Fall25/FinalsReview/Physics/Integration Tehcniques/Simpsons Rule.md",
     "03_Fall25/FinalsReview/Math/mathExamNotes.jpg",
     "03_Fall25/Math/Textbooks/Chapter3/Desmos _ 3D Graphing Calculator-1.png",
     "03_Fall25/Math/Textbooks/Chapter7/Pasted image 20251115132615.png",
